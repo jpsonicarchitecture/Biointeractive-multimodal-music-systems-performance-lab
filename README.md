@@ -1,6 +1,5 @@
 # Biointeractive-multimodal-music-systems-performance-lab
 Official repository for research, creation and development in bio-interactive arts, music performance, multimodal interactive systems. Includes Pure Data modules, smartphone-based DMIs, mixed-media works, scores, documentation, and supplementary material from my , master's degree and doctoral research.
-# Posada BioInteractive Multimodal Music & Performance Lab  
 ### Research – Creation – Interactive Systems – Mixed & Performative Works
 
 Welcome to the official repository of the **Posada BioInteractive Multimodal Music & Performance Lab**, a space dedicated to the intersection between **sound art**, **performance**, **interactive technologies**, **biosignals**, **MMHCI/BCI/DMI systems**, and composition for **mixed and augmented works**.
