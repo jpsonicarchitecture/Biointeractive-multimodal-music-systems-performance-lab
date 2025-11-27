@@ -25,7 +25,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 ## 📁 ESTRUCTURA DE APÉNDICES
 
 ### A.1. Resultados de pruebas de interacción individuales
-- **A.1.2** Pruebas de interacción con el dispositivo Crosier-control 
+- **[A.1.2 Pruebas de interacción con el dispositivo Crosier-control](./apendices-tesis/A.1-pruebas-interaccion/A.1.2-crosier-control/Resultados%20de%20interacción%20Crosier-control.pdf)**
 - **A.1.3** Pruebas de sistemas BCI (Muse 2, Muse S Athena, Mindflex)
 - **A.1.4** Pruebas de sistemas MuCI (WIMUMO Lite)
 
