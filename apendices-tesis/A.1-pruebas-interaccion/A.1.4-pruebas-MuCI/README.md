@@ -6,3 +6,6 @@ Este apartado contiene los resultados de las pruebas realizadas con múltiples s
   
 Incluye el documento PDF con las tablas de interacción y efectividad.
 
+
+
+apendices-tesis/A.1-pruebas-interaccion/A.1.4-pruebas-MuCI
