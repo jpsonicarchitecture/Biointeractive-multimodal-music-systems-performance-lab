@@ -10,4 +10,4 @@ Incluye el documento PDF con las tablas de interacción y efectividad.
 
 ## Archivo
 
-- [Descargar PDF de las pruebas](./A.1.3-pruebas-BCI.pdf)
+[Ver PDF online](https://jpsonicarchitecture.github.io/Biointeractive-multimodal-music-systems-performance-lab/apendices-tesis/A.1-pruebas-interaccion/A.1.3-pruebas-BCI/Pruebas%20para%20Repositorio%20GITHUB%20Muse-mindflex.pdf)
