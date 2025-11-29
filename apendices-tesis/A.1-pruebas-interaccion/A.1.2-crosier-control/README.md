@@ -1,9 +1,7 @@
 # A.1.2 Pruebas de Crosier -control
-Este apartado contiene los resultados de las pruebas realizadas con múltiples sistemas BCI:
+Este apartado contiene los resultados de las pruebas realizadas con Crosier-Control:
 
-- Muse 2
-- Muse Athena
-- Mindflex (EEG de un solo canal)
+- DMI Smartphone Digital MUsical Instrumemts
 
 Incluye el documento PDF con las tablas de interacción y efectividad.
 
