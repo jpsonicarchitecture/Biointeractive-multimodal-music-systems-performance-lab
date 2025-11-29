@@ -7,7 +7,7 @@ Este apartado contiene los resultados de las pruebas realizadas con múltiples s
 Incluye el documento PDF con las tablas de interacción y efectividad.
 
 
-[Ver PDF online](https://jpsonicarchitecture.github.io/Biointeractive-multimodal-music-systems-performance-lab/apendices-tesis/A.1-pruebas-interaccion/.pdf)
+[Ver PDF online](https://jpsonicarchitecture.github.io/Biointeractive-multimodal-music-systems-performance-lab/apendices-tesis/A.1-pruebas-interaccion/A.1.4-pruebas-MuCI/Pruebas%20para%20repositorio%20Muci.pdf)
 
 
 
