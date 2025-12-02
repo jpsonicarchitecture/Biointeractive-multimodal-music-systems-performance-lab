@@ -30,7 +30,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - **[A.1.4 Pruebas de sistemas MuCI (WIMUMO Lite)](./apendices-tesis/A.1-pruebas-interaccion/A.1.4-pruebas-MuCI/Pruebas%20para%20repositorio%20Muci.pdf)** 
 
 ### A.2. Manuales de usuario de sensores de smartphones
-- A.2.1 Módulo Acelerómetro (M.Acc)
+- [A.2.1 Módulo Acelerómetro (M.Acc)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.1%20Modulo%20acc/AccMAnual-repositorio-EN.pdf)
 - A.2.2 Módulo Giroscopio (M.Gir)
 - A.2.3 Módulo Aceleración lineal (M.Accl)
 - A.2.4 Módulo Campo Magnético (M.CMag)
