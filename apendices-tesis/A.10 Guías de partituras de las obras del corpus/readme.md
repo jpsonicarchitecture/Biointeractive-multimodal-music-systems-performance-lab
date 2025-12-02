@@ -1,3 +1,3 @@
-En esta seccion de encuentran los folletos de publicidad de cada obra y los servicios de Ju
+En esta seccion de encuentran los folletos de publicidad y Guias de Partitura para cada obra
 ## Juanerrante Sonic Architecture
-Tambien se encuentranlas Guis o parituras de las obras.
+
