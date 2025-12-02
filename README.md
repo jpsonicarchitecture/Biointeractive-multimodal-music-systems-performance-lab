@@ -70,7 +70,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 ### A.9. Códigos desarrollados en Processing
 
 ### A.10. Guías de partituras de las obras del corpus
-- A.10.1 Documentación de notaciones
+- A.10.1 Documentación de folletos y propaganda
 - A.10.2  BIOLEVIGACION  SUITE PERFORMATICA- Guías de interpretación y partitura
 
 ---
