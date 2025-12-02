@@ -18,8 +18,8 @@ It also includes artistic, technical and conceptual materials that reflect my br
 - Developer of augmented instruments and bio-interactive performance works  
 
 ---
-# 📚 TESIS DOCTORAL - APÉNDICES Y ANEXOS
-
+# 📚 TESIS DOCTORAL  DISEÑO Y DESARROLLO DE SISTEMAS MMHCI HIBRIDOS Y UN DMI CON SMARTPHONES PARA OBRAS BIO-INTERACTIVAS PERFORMATICAS
+#- APÉNDICES Y ANEXOS
 Debido a la extensión y naturaleza técnica de los materiales complementarios vinculados a esta investigación —incluyendo resultados completos de pruebas de interacción, módulos desarrollados en Pure Data, manuales de usuario, documentación técnica de hardware y software, modelos 3D y guías o partituras de las obras del corpus— se ha optado por alojar dichos recursos en este repositorio digital de acceso abierto.
 
 ## 📁 ESTRUCTURA DE APÉNDICES
