@@ -33,9 +33,9 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.2.1 Módulo Acelerómetro (M.Acc)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.1%20Modulo%20acc/AccMAnual-repositorio-EN.pdf)
 - [A.2.2 Módulo Giroscopio (M.Gir)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.2%20Modulo%20Mgir/GiroMAnual-repositorio-EN%20.pdf)
 - [A.2.3 Módulo Aceleración lineal (M.Accl)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.3%20Modulo%20Ace.lineal/LinAccMAnual-repositorio-EN.pdf)
-- A.2.4 Módulo Campo Magnético (M.CMag)
-- A.2.5 Módulo Proximidad (M.Prox)
-- A.2.6 Módulo Vector de Rotación (M.VecRot y M.VecRot 3D)
+- [A.2.4 Módulo Campo Magnético (M.CMag)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.4%20Modulo%20Campo%20magnetico%20Cmag/CMag-repositorio-EN%20.pdf)
+- [A.2.5 Módulo Proximidad (M.Prox)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.5%20Módulo%20proximidad/ProxiMAnual-repositorio-EN.pdf)
+- [A.2.6 Módulo Vector de Rotación (M.VecRot y M.VecRot 3D)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.6%20Módulo%20Vector%20de%20Rotación/VectorMAnual-repositorio-EN.pdf)
 - A.2.7 Módulo Sensores Ambientales (M.Ambi)
 - A.2.8 Módulo Pantalla Táctil (M.Táctil)
 - A.2.9 Módulo Ex1
