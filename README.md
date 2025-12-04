@@ -38,9 +38,9 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.2.6 Módulo Vector de Rotación (M.VecRot y M.VecRot 3D)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.6%20Módulo%20Vector%20de%20Rotación/VectorMAnual-repositorio-EN.pdf)
 - [A.2.7 Módulo Sensores Ambientales (M.Ambi)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.7%20Módulo%20Sensor%20ambiental%20(M.ambi)/AmbientMAnual-repositorio-EN.pdf)
 - [A.2.8 Módulo Pantalla Táctil (M.Táctil)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.8%20Módulo%20pantalla%20Táctil%20(M.Tâctil)/pantallaMAnual-repositorio-EN.pdf)
-- A.2.9 Módulo Ex1
-- A.2.10 Módulo Ex2 (oscHook)
-- A.2.11 Módulo Ex3 (ZIG SIM)
+- [A.2.9 Módulo Ex1](./apendices-tesis/A.2%20Manuals-smartphones/A.2.9%20Módulo%20Ex1/Ex1MAnual-repositorio-EN.pdf)
+- [A.2.10 Módulo Ex2 (oscHook)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.10%20Módulo%20Ex2/Ex2MAnual-repositorio-EN.pdf)
+- [A.2.11 Módulo Ex3 (ZIG SIM)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.11%20Módulo%20Ex3/Ex3MAnual-repositorio-EN.pdf)
 
 ### A.3. Manuales y documentación técnica del DMI Crosier-Control
 - A.3.1 Crosier-Control-Data v2.0
