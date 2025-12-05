@@ -43,7 +43,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.2.11 Módulo Ex3 (ZIG SIM)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.11%20Módulo%20Ex3/Ex3MAnual-repositorio-EN.pdf)
 
 ### A.3. Manuales y documentación técnica del DMI Crosier-Control
-- [A.3.1 Crosier-Control-Data v2.0](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/portada%20manual%20crosierc%20ontrol.pdf)
+- [A.3.1 Crosier-Control-Data v2.0](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/CrosierMAnual-repositorio-EN%20.pdf)
 
 ### A.4. Manuales y documentación técnica de sistemas BCI
 - A.4.1 MUSE-DataIM v4.0
@@ -72,8 +72,8 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 ### A.10. Guías de partituras de las obras del corpus
 - [A.10.1 Documentación de Folletos y propaganda](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.1%20Documentación%20de%20Folletos%20y%20propaganda/Folleto-biolevigacion.jpg)
 - [A.10.2 BIOLEVIGACION SUITE PERFORMATICA Guías de interpretación y partitura](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.2%20Guías%20de%20interpretación%20y%20partitura/PARITURA-BIOLEVIGACION-EN.pdf)
----
 
+---
 **Repositorio completo del material:** Todos los archivos se encuentran disponibles en este repositorio.
 
 ---
