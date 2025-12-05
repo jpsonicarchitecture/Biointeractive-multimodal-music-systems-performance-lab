@@ -43,7 +43,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.2.11 Módulo Ex3 (ZIG SIM)](./apendices-tesis/A.2%20Manuals-smartphones/A.2.11%20Módulo%20Ex3/Ex3MAnual-repositorio-EN.pdf)
 
 ### A.3. Manuales y documentación técnica del DMI Crosier-Control
-- A.3.1 Crosier-Control-Data v2.0
+- [A.3.1 Crosier-Control-Data v2.0](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/portada%20manual%20crosierc%20ontrol.pdf)
 
 ### A.4. Manuales y documentación técnica de sistemas BCI
 - A.4.1 MUSE-DataIM v4.0
