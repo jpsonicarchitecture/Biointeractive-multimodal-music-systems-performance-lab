@@ -17,7 +17,8 @@ Sistema de control para el  DMI Crosier-Control con procesamiento multimodal de 
 - `smartouch.pd` / `smartouchSM2.pd` - Interfaces táctiles
 - `bangtac.pd` - Control de eventos táctiles
 - `vector3D.pd` - Control paramtros de cuandrantes en 3D
-### Ver manual de referncia  A.2 para cada modulo de sendor y A.3 para el manuel de Crosier control
+### Ver manual de referncia  A.2 para cada modulo de sendor y
+[A.3 para el manuel de Crosier control](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/CrosierMAnual-repositorio-EN%20.pdf)
 
 ### Recursos
 - `3da.jpg` - Diagrama o interfaz gráfica
@@ -29,7 +30,7 @@ Sistema de control para el  DMI Crosier-Control con procesamiento multimodal de 
 ## Uso básico
 1. Abrir `1_CrosierMain.pd`
 2. Conectar a red WLAN en smartphones y computadora 
-3. Configurar direcciones OSC en cada telefono con la aplicacion Sensor2OSC. osckHooK segun se requiera
+3. Configurar direcciones OSC y puertos en cada telefono con la aplicacion Sensor2OSC. osckHooK segun se requiera
 4. Ejecutar patch principal
 
 ## Parámetros ajustables
