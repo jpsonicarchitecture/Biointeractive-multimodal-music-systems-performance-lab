@@ -54,7 +54,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - A.5.1 WIMUMO-Data v3.1
 
 ### A.6. Módulos desarrollados en Pure Data — Sistemas BCI
-- A.6.1 Crosier-Control-Data v2.0
+- [A.6.1 Crosier-Control-Data v2.0](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-ControlData%20module)
 - A.6.2 MUSE-DataIM v4.0
 - A.6.3 MUSE-DataIMmov v4.0
 
