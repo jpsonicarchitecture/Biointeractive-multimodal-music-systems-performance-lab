@@ -26,7 +26,6 @@ Control system with MUSE for motion applications.
 ## Author
 Juan Pablo Posada Alvarez
 
-Translated with DeepL.com (free version)
 
 ESPAÑOL
 
