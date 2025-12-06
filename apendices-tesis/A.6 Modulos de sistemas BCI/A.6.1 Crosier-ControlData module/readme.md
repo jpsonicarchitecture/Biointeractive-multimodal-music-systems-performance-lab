@@ -17,7 +17,7 @@ Sistema de control para el  DMI Crosier-Control con procesamiento multimodal de 
 - `smartouch.pd` / `smartouchSM2.pd` - Interfaces táctiles
 - `bangtac.pd` - Control de eventos táctiles
 - `vector3D.pd` - Control paramtros de cuandrantes en 3D
-### Ver manual de referncia  A.2 para cada modulo de sendor y
+### Ver manual de referncia  A.2 para cada modulo de lo Sensores en Smartphones y 
 [A.3 para el manuel de Crosier control](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/CrosierMAnual-repositorio-EN%20.pdf)
 
 ### Recursos
