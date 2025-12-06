@@ -1,0 +1,133 @@
+#N canvas 350 143 832 499 10;
+#X obj 30 -140 import mrpeach;
+#X obj 330 155 for++ 0 180 1000;
+#X obj 325 -135 inlet;
+#X obj 326 -44 unpack f f;
+#X obj 30 311 outlet;
+#X obj 325 73 mavg;
+#X obj 107 -60 cnv 15 193 17 empty empty Modulo\ M.\ Ambi. 53 6 1 12
+#353b64 #fffafa 0;
+#X obj 108 -40 cnv 15 192 86 empty empty empty 20 12 0 14 #eae6e6 #404040
+0;
+#X obj 125 7 hsl 30 13 2 20 0 0 \$0-senciluz empty Sencibilidad\  -3
+-9 2 10 #000000 #fc0400 #000000 0 1;
+#X obj 118 -23 nbx 3 14 -1e+37 1e+37 0 0 empty empty lums 51 4 2 13
+#1ca3c4 #000000 #000000 3.56753 256 1;
+#X obj 210 -38 Flatgui/knob 32 32 0 127 0 0 \$0-sencibilidad empty
+Calibrador\ lumenes 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+;
+#X obj 125 25 nbx 3 11 -1e+37 1e+37 0 0 empty empty INTENSIDAD\ LUZ
+-8 -57 2 9 #000000 #8ac6c7 #000000 0 256 0;
+#X obj 170 10 nbx 3 14 -1e+37 1e+37 0 0 empty \$0-midiluz midi\ data
+4 17 2 8 #fcfcfc #000000 #000000 0 256 0;
+#X text 30 330 SALIDA MIDI;
+#X floatatom 361 52 5 0 0 0 - - -, f 5;
+#X obj 286 -38 vsl 10 73 0 32.4579 0 0 empty \$0-rv empty 0 -9 0 10
+#000000 #0fccb6 #000000 791 1;
+#X text 25 -120 MODULO PARAMETROS POR SENSOR DE LUZ TELEFONO 1;
+#X obj 325 -70 mrpeach/routeOSC /light;
+#X text 729 -68 1.bottom;
+#X text 729 -47 2.top;
+#X msg 680 -19 range \$1 \$2;
+#N canvas 366 206 254 268 flash-time 0;
+#X obj 68 180 pack;
+#X obj 103 149 t b a;
+#X obj 68 205 outlet;
+#X obj 103 104 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-bottom empty
+0 -8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 103 124 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-top empty 0
+-8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 70 40 inlet;
+#X obj 120 60 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 48 42 2 100 100;
+#X restore 680 -69 pd flash-time;
+#X obj 326 18 line 30;
+#X msg 326 -12 \$1 200;
+#X floatatom 80 151 5 0 0 0 - - -, f 5;
+#X obj 249 -6 bng 21 250 50 0 ajusluz empty empty 17 7 0 10 #a80000
+#000000 #000000;
+#X msg 44 151 0;
+#X msg 120 150 0;
+#X msg 150 150 127;
+#X obj 30 181 maxlib/scale;
+#X obj 246 -21 nbx 3 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#000000 #ffffff #000000 0 256 3;
+#X obj 30 210 clip 0 127;
+#X obj 30 270 line 30;
+#X msg 30 240 \$1 50;
+#X obj 30 290 int;
+#X msg 680 -100 0;
+#X text 250 -40 max--;
+#X text 250 20 min--;
+#X obj 500 -70 mrpeach/routeOSC /proximity;
+#X obj 500 -40 unpack f;
+#X floatatom 500 -10 5 0 0 0 - - -, f 5;
+#X obj 500 25 sel 0;
+#X obj 215 5 tgl 23 0 empty \$0-proxcel1 proximity -2 27 2 8 #fcfcfc
+#000000 #000000 1 1;
+#X obj 326 112 s \$0-valuz;
+#X obj 30 121 r \$0-valuz;
+#X obj 105 120 value \$0-maxluz;
+#X obj 45 65 r \$0-ajusluz;
+#X obj 115 325 s \$0-midiluz;
+#X obj 500 60 s \$0-proxcel1;
+#X obj 210 70 value \$0-maxluz;
+#X obj 114 -92 r \$0-valuz;
+#X obj 402 21 r \$0-senciluz;
+#X obj 720 -100 value \$0-vmax;
+#X obj 675 -130 r \$0-ajusluz;
+#X obj 680 10 s \$0-rv;
+#X obj 400 115 s audioluz1;
+#X obj 590 60 s audioprox1;
+#X floatatom 250 280 5 0 0 0 - - -, f 5;
+#X connect 2 0 17 0;
+#X connect 2 0 38 0;
+#X connect 3 0 23 0;
+#X connect 5 0 43 0;
+#X connect 5 0 55 0;
+#X connect 8 0 11 0;
+#X connect 9 0 15 0;
+#X connect 10 0 30 0;
+#X connect 10 0 49 0;
+#X connect 14 0 5 1;
+#X connect 17 0 3 0;
+#X connect 20 0 54 0;
+#X connect 21 0 20 0;
+#X connect 22 0 5 0;
+#X connect 23 0 22 0;
+#X connect 24 0 29 2;
+#X connect 26 0 29 1;
+#X connect 27 0 29 3;
+#X connect 28 0 29 4;
+#X connect 29 0 31 0;
+#X connect 31 0 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 32 0;
+#X connect 34 0 4 0;
+#X connect 34 0 47 0;
+#X connect 35 0 21 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 40 0 56 0;
+#X connect 41 0 48 0;
+#X connect 44 0 29 0;
+#X connect 45 0 24 0;
+#X connect 46 0 26 0;
+#X connect 46 0 27 0;
+#X connect 46 0 28 0;
+#X connect 46 0 45 0;
+#X connect 50 0 9 0;
+#X connect 51 0 14 0;
+#X connect 52 0 21 1;
+#X connect 52 0 15 0;
+#X connect 53 0 35 0;
+#X connect 53 0 52 0;
+#X coords 0 -1 1 1 200 107 2 103 -62;

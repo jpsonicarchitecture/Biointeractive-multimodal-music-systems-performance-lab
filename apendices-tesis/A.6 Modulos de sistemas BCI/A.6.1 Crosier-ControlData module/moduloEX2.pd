@@ -1,0 +1,328 @@
+#N canvas 26 104 1381 734 12;
+#X obj 95 80 import mrpeach;
+#X obj 50 30 inlet;
+#X floatatom 45 425 5 0 0 0 - - -, f 5;
+#X floatatom 90 480 5 0 0 0 - - -, f 5;
+#X obj 150 132 cnv 15 255 16 empty empty MODULO\ EX2 66 5 2 12 #62a0d0
+#000000 0;
+#X obj 250 330 mrpeach/routeOSC /audio/frequency;
+#X obj 250 360 unpack f;
+#X obj 46 329 mrpeach/routeOSC /audio/spl;
+#X obj 250 420 mavg;
+#X obj 45 500 mavg;
+#X obj 46 359 unpack f, f 17;
+#X obj 150 150 cnv 15 258 139 empty empty empty 20 12 0 14 #eeeeee
+#404040 0;
+#X obj 160 164 hsl 60 8 0 50 0 0 \$0-senspl empty Sencibilidad\ SPL
+-2 -8 1 9 #000000 #00d6e6 #000000 0 1;
+#X obj 160 174 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 246 162 hsl 60 8 0 40 0 0 sensfrc empty Sencibilidad\ FRC -2
+-8 1 9 #000000 #00d6e6 #000000 0 1;
+#X obj 246 172 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 160 190 vsl 8 84 0 127 0 0 empty \$0-presionmidi SPL\  -3 94
+1 9 #fcfcfc #000000 #000000 4543 1;
+#X obj 275 390 r sensfrc;
+#X obj 173 230 nbx 3 14 -1e+37 1e+37 0 0 empty \$0-presionmidi MIDI\ spl
+0 -8 0 10 #000000 #ff0505 #000000 69.5085 256 0;
+#X text 237 201 |;
+#X text 272 201 |;
+#X text 312 201 |;
+#X text 352 199 |;
+#X text 340 214 4Khz;
+#X text 227 214 30Hz;
+#X obj 275 230 nbx 3 14 -1e+37 1e+37 0 0 empty \$0-frechookmidi MIDI\ frec
+0 -8 0 10 #000000 #2cd416 #000000 53 256 1;
+#X text 170 265 0;
+#X text 170 190 -120;
+#X obj 250 710 outlet;
+#X obj 250 470 ftom, f 6;
+#X obj 204 252 cnv 15 203 36 empty empty empty 20 12 0 14 #876e6e #404040
+0;
+#X obj 45 395 clip 0 127;
+#X obj 45 534 t f;
+#X floatatom 45 575 5 0 0 0 - - -, f 5;
+#X obj 70 605 s \$0-presionmidi;
+#X obj 90 450 r \$0-senspl;
+#X obj 45 705 outlet;
+#X obj 260 505 int;
+#X obj 295 470 s \$0-frecuencia;
+#X floatatom 320 450 5 0 0 0 - - -, f 5;
+#X obj 105 705 s oskpresion;
+#X obj 310 710 s oskfrecuencia;
+#X obj 260 535 s \$0-frechookmidi;
+#X obj 515 525 change 3;
+#X obj 515 630 bng 39 250 50 0 \$0-control1hook empty empty 17 7 0
+10 #fcfcfc #000000 #000000;
+#X obj 515 565 debounce 3000;
+#X obj 855 415 r \$0-presionmidi;
+#X msg 355 395 12;
+#X msg 140 475 6;
+#X obj 145 415 r \$0-banghook;
+#X obj 355 365 r \$0-banghook;
+#X obj 330 65 loadbang;
+#X obj 345 105 s \$0-banghook;
+#X obj 305 255 bng 24 250 50 0 empty \$0-control1hook Control1 -3 27
+2 9 #fcfcfc #000000 #000000;
+#X obj 45 660 spigot;
+#X obj 250 660 spigot;
+#X obj 330 150 tgl 15 0 \$0-comphook \$0-receivecomphook ON/off -11
+23 0 10 #fcfcfc #000000 #000000 1 1;
+#X obj 290 615 r \$0comphook;
+#X obj 705 410 r \$0-banghook;
+#X obj 334 256 hsl 41 12 500 4000 0 0 \$0-frechookajus empty Frec.
+47 4 1 9 #000000 #11ff00 #000000 2971 1;
+#X obj 339 271 nbx 5 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#fcfcfc #000000 #000000 3100 256 0;
+#X obj 515 465 spigot;
+#X obj 232 190 cnv 15 148 20 empty empty empty 20 12 0 14 #6baccc #404040
+0;
+#X obj 234 192 hsl 139 15 30 5000 0 0 empty \$0-frecuencia frecuencia
+72 -9 2 10 #000000 #00ff11 #000000 412 1;
+#X obj 325 230 nbx 5 14 -1e+37 1e+37 0 0 empty \$0-frecuencia empty
+0 -8 0 10 #000000 #49cdf8 #000000 178.385 256 1;
+#X floatatom 635 525 5 0 0 0 - - -, f 5;
+#X floatatom 582 470 5 0 0 0 - - -, f 5;
+#X obj 550 430 r \$0-comphook;
+#X obj 515 270 bng 39 250 50 0 \$0-control2hook empty empty 17 7 0
+10 #fcfcfc #000000 #000000;
+#X obj 500 240 debounce 3000;
+#X obj 500 105 spigot;
+#X obj 540 75 r \$0-comphook;
+#X obj 500 40 r \$0-presionmidi;
+#X obj 210 254 bng 25 250 50 0 empty \$0-control2hook Control\ 2 -6
+27 2 9 #fcfcfc #000000 #000000;
+#X obj 635 50 r \$0-banghook;
+#X obj 645 350 r \$0-frechookajus;
+#X obj 243 256 hsl 41 12 0 120 0 0 \$0-presihookajust empty Spl 47
+4 1 9 #000000 #11ff00 #000000 3433 1;
+#X obj 253 270 nbx 5 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#fcfcfc #000000 #000000 103 256 0;
+#X obj 635 115 r \$0-presihookajust;
+#X obj 1190 150 r \$0-frechookmidi;
+#X floatatom 1190 195 5 0 0 0 - - -, f 5;
+#X obj 1190 235 value frecmidi;
+#X obj 1065 213 value frecmidi;
+#X obj 1065 130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 1065 260 5 0 0 0 - - -, f 5;
+#X obj 1065 40 inlet;
+#X obj 1065 170 debounce 2000;
+#X obj 1085 285 s \$0-freezefrec;
+#X obj 365 170 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-freezefrec Freeze\ Frec
+0 -8 2 9 #fcfcfc #000000 #000000 0 256 1;
+#X obj 950 170 s \$0-freezebang;
+#X obj 385 190 bng 18 250 50 0 empty \$0-freezebang empty 17 7 0 10
+#fcfcfc #000000 #000000;
+#X obj 1085 320 s frefrecout;
+#X obj 1065 700 outlet;
+#X obj 505 715 outlet;
+#X obj 555 715 outlet;
+#X text 565 285 trigger por preison spl;
+#X text 575 645 trigger de Frecuancia;
+#X text 1050 715 salida freeze midi;
+#X obj 395 60 r con3hook;
+#X obj 395 35 inlet;
+#X text 100 30 recibe OSC;
+#X text 385 15 recibe contrl para desactivar triggers;
+#X text 1065 15 recibe trigger para freeze midi note;
+#X floatatom 650 205 5 0 0 0 - - -, f 5;
+#X obj 790 90 r \$0-frecuencia;
+#X floatatom 625 245 5 0 0 0 - - -, f 5;
+#X text 60 305 PRESION SONORA;
+#X text 255 305 FRECUENCIA;
+#X obj 220 90 s \$0-metrohook;
+#X obj 220 10 loadbang;
+#X msg 220 30 1;
+#X msg 255 30 0;
+#X obj 705 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 700 30 r \$0-metrohook;
+#X obj 500 215 change 4;
+#X obj 500 175 expr if( $f1 > $f2 && $f3 < 600 \, 4 \, 0);
+#X obj 505 315 cnv 15 478 8 empty empty empty 20 12 0 14 #aa3c3c #404040
+0;
+#X obj 680 380 r \$0-metrohook;
+#X text 805 30 para actualizar datos;
+#X floatatom 825 150 5 0 0 0 - - -, f 5;
+#X obj 790 120 t b f;
+#X floatatom 885 475 5 0 0 0 - - -, f 5;
+#X obj 855 445 t b f;
+#X msg 685 450 3100;
+#X obj 735 450 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 220 60 metro 300;
+#X obj 505 675 cnv 15 478 8 empty empty empty 20 12 0 14 #aa3c3c #404040
+0;
+#X msg 433 151 3100;
+#X msg 435 185 103;
+#X obj 1250 260 s frefrecout1;
+#X obj 1165 355 mrpeach/routeOSC /light;
+#X obj 1165 390 unpack f;
+#X floatatom 1165 420 5 0 0 0 - - -, f 5;
+#X obj 1165 450 mavg 5;
+#X obj 1165 470 int;
+#X floatatom 1225 495 5 0 0 0 - - -, f 5;
+#X obj 1165 510 expr if ($f1 < 5 \, 7 \, 0);
+#X obj 1165 535 change 7;
+#X obj 1165 605 bng 59 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1165 570 debounce 3000;
+#X obj 575 620 s audiofrechook;
+#X obj 695 260 s audiopreshook;
+#X obj 815 290 s \$0-receivecomphook;
+#X msg 825 260 0;
+#X obj 825 230 del 30;
+#X obj 825 205 t b b;
+#X obj 875 230 del 2000;
+#X msg 860 260 1;
+#X text 885 250 asegura que no reciba \; datos por 2 segundos;
+#X text 960 290 envio toggle;
+#X obj 810 650 s \$0-receivecomphook;
+#X msg 820 620 0;
+#X obj 820 590 del 30;
+#X obj 820 565 t b b;
+#X obj 870 590 del 2000;
+#X msg 855 620 1;
+#X text 880 610 asegura que no reciba \; datos por 2 segundos;
+#X obj 515 495 expr if( $f1 > $f2 && $f3 > 105 \, 3 \, 0);
+#X obj 580 595 s presblock;
+#X text 665 595 para audio modulo;
+#X text 770 350 ajuste frec manual interfaz;
+#X text 785 380 actualiza dato de umbral;
+#X text 610 695 para activar este trigger de frecuancia la presion
+sonora debe estar arriba \; de 100 y la frec en 3100 o el ajuste
+personalizado;
+#X text 805 50 105dB SPL umbral defecto;
+#X text 1085 60 cuando recibe bang manda valor de frec: al sinte canal
+9 de live;
+#X text 1180 320 envio pd EX2;
+#X text 1235 280 envio referencia pd audio EX2;
+#X obj 1090 95 r touch3sec;
+#X obj 950 195 s stopsinte1;
+#X text 925 210 parar sonido sinte;
+#X msg 635 90 100;
+#X connect 1 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 1;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 10 0;
+#X connect 8 0 29 0;
+#X connect 8 0 38 0;
+#X connect 8 0 39 0;
+#X connect 8 0 55 0;
+#X connect 8 0 61 0;
+#X connect 9 0 32 0;
+#X connect 10 0 31 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 17 0 8 1;
+#X connect 29 0 37 0;
+#X connect 31 0 2 0;
+#X connect 32 0 33 0;
+#X connect 32 0 54 0;
+#X connect 33 0 34 0;
+#X connect 35 0 3 0;
+#X connect 37 0 42 0;
+#X connect 43 0 45 0;
+#X connect 43 0 153 0;
+#X connect 43 0 158 0;
+#X connect 45 0 44 0;
+#X connect 45 0 94 0;
+#X connect 45 0 140 0;
+#X connect 46 0 122 0;
+#X connect 47 0 8 1;
+#X connect 48 0 9 1;
+#X connect 49 0 48 0;
+#X connect 50 0 47 0;
+#X connect 51 0 52 0;
+#X connect 51 0 56 0;
+#X connect 51 0 127 0;
+#X connect 51 0 128 0;
+#X connect 54 0 36 0;
+#X connect 54 0 40 0;
+#X connect 55 0 28 0;
+#X connect 55 0 41 0;
+#X connect 57 0 54 1;
+#X connect 57 0 55 1;
+#X connect 58 0 123 0;
+#X connect 59 0 60 0;
+#X connect 61 0 65 0;
+#X connect 61 0 157 0;
+#X connect 67 0 61 1;
+#X connect 67 0 66 0;
+#X connect 69 0 68 0;
+#X connect 69 0 93 0;
+#X connect 69 0 141 0;
+#X connect 69 0 145 0;
+#X connect 70 0 103 0;
+#X connect 70 0 115 0;
+#X connect 71 0 70 1;
+#X connect 72 0 70 0;
+#X connect 74 0 170 0;
+#X connect 75 0 157 1;
+#X connect 76 0 77 0;
+#X connect 78 0 115 1;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 80 0 129 0;
+#X connect 82 0 84 0;
+#X connect 83 0 86 0;
+#X connect 83 0 89 0;
+#X connect 83 0 168 0;
+#X connect 84 0 87 0;
+#X connect 84 0 91 0;
+#X connect 84 0 92 0;
+#X connect 85 0 83 0;
+#X connect 86 0 82 0;
+#X connect 98 0 56 0;
+#X connect 99 0 56 0;
+#X connect 104 0 120 0;
+#X connect 109 0 110 0;
+#X connect 110 0 125 0;
+#X connect 111 0 125 0;
+#X connect 113 0 112 0;
+#X connect 113 0 170 0;
+#X connect 114 0 69 0;
+#X connect 115 0 105 0;
+#X connect 115 0 114 0;
+#X connect 117 0 123 0;
+#X connect 117 0 124 0;
+#X connect 120 0 115 0;
+#X connect 120 1 115 2;
+#X connect 120 1 119 0;
+#X connect 122 0 157 0;
+#X connect 122 1 121 0;
+#X connect 122 1 157 2;
+#X connect 123 0 157 1;
+#X connect 125 0 108 0;
+#X connect 127 0 59 0;
+#X connect 128 0 76 0;
+#X connect 130 0 131 0;
+#X connect 131 0 132 0;
+#X connect 132 0 133 0;
+#X connect 133 0 134 0;
+#X connect 134 0 135 0;
+#X connect 134 0 136 0;
+#X connect 136 0 137 0;
+#X connect 137 0 139 0;
+#X connect 139 0 138 0;
+#X connect 143 0 142 0;
+#X connect 144 0 143 0;
+#X connect 145 0 146 0;
+#X connect 145 1 144 0;
+#X connect 146 0 147 0;
+#X connect 147 0 142 0;
+#X connect 151 0 150 0;
+#X connect 152 0 151 0;
+#X connect 153 0 154 0;
+#X connect 153 1 152 0;
+#X connect 154 0 155 0;
+#X connect 155 0 150 0;
+#X connect 157 0 43 0;
+#X connect 167 0 83 0;
+#X connect 170 0 115 1;
+#X coords 0 -1 1 1 266 162 2 145 129;

@@ -1,0 +1,69 @@
+#N canvas 304 146 752 428 12;
+#X msg 30 240 port \$1;
+#X obj 27 54 cnv 15 128 127 empty empty empty 20 12 0 14 #c2ccd6 #404040
+0;
+#X obj 30 325 outlet;
+#X obj 28 2 import mrpeach;
+#X obj 30 290 mrpeach/unpackOSC;
+#X obj 120 71 bng 19 50 20 0 empty empty Main\ phone-Puerto -85 -12
+1 9 #fcfcfc #b84a4e #000000;
+#X obj 30 171 cnv 5 32 10 empty empty Phone\ 1\ OSC\ out -1 4 2 7 #e0e0e0
+#980101 0;
+#X obj 28 37 cnv 15 127 15 empty empty empty 20 12 0 14 #5f4294 #404040
+0;
+#X obj 110 91 cnv 5 32 10 empty empty Actividad -1 4 0 8 #e0e0e0 #980101
+0;
+#X obj 35 99 nbx 5 11 -1e+37 1e+37 0 0 empty empty \ Manual\ port 0
+-8 1 8 #292929 #f27386 #000000 0 256 0;
+#X dropdown 35 67 6 1 0 0 - #0-oscport #0-oscport1, f 6;
+#X obj 185 55 loadbang;
+#X obj 185 110 s \$0-oscport;
+#X obj 30 210 r \$0-oscport1;
+#X floatatom 95 240 5 0 0 0 - - -, f 5;
+#X msg 205 240 port \$1;
+#X obj 205 325 outlet;
+#X obj 205 290 mrpeach/unpackOSC;
+#X floatatom 270 240 5 0 0 0 - - -, f 5;
+#X obj 30 265 mrpeach/udpreceive;
+#X dropdown 34 125 6 1 0 0 - #0-oscportb #0-oscport3, f 6;
+#X obj 375 105 s \$0-oscportb;
+#X obj 119 128 bng 19 50 20 0 empty empty Phone2-Puerto -82 -11 1 9
+#fcfcfc #b84a4e #000000;
+#X obj 205 210 r \$0-oscport3;
+#X obj 265 325 s routero3;
+#X obj 105 171 cnv 5 32 10 empty empty Phone\ 2\ OSC\ out -1 4 2 7
+#e0e0e0 #980101 0;
+#X obj 110 150 cnv 5 32 10 empty empty Actividad -1 4 0 8 #e0e0e0 #980101
+0;
+#X obj 36 157 nbx 5 11 -1e+37 1e+37 0 0 empty empty \ Manual\ port
+0 -8 1 8 #292929 #f27386 #000000 0 256 0;
+#X obj 32 38 cnv 5 32 10 empty empty OSC\ DMI\ Crosier\ control 11
+6 2 10 #4e3974 #ffffff 0;
+#X obj 85 325 s oscgeneral;
+#X msg 359 240 8700;
+#X obj 400 294 print received;
+#X obj 205 265 mrpeach/udpreceive;
+#X msg 185 80 names 8200 8300 8400 8500;
+#X msg 375 75 names 8600 8700 8800 8900;
+#X obj 395 345 print unpacked;
+#X connect 0 0 19 0;
+#X connect 4 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 29 0;
+#X connect 9 0 0 0;
+#X connect 11 0 33 0;
+#X connect 11 0 34 0;
+#X connect 13 0 14 0;
+#X connect 13 0 0 0;
+#X connect 15 0 32 0;
+#X connect 17 0 16 0;
+#X connect 17 0 24 0;
+#X connect 17 0 22 0;
+#X connect 19 0 4 0;
+#X connect 23 0 18 0;
+#X connect 23 0 15 0;
+#X connect 30 0 15 0;
+#X connect 32 0 17 0;
+#X connect 33 0 12 0;
+#X connect 34 0 21 0;
+#X coords 0 -1 1 1 134 149 2 24 35;

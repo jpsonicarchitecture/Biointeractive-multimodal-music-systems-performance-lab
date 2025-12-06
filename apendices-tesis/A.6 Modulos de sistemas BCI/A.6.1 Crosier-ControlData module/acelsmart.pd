@@ -1,0 +1,307 @@
+#N canvas 264 27 977 695 10;
+#X obj 190 670 outlet;
+#X obj 63 99 int;
+#X obj 220 30 loadbang;
+#X obj 45 27 inlet;
+#X obj 40 280 mrpeach/routeOSC /accelerometer;
+#X obj 40 310 unpack f f f, f 24;
+#X floatatom 34 338 5 0 0 0 - - -, f 5;
+#X floatatom 102 339 5 0 0 0 - - -, f 5;
+#X floatatom 170 340 5 0 0 0 - - -, f 5;
+#X floatatom 220 530 5 0 0 0 - - -, f 5;
+#X obj 102 372 mavg;
+#X obj 190 550 clip 1 127;
+#X obj 481 650 outlet;
+#X obj 35 372 mavg;
+#X obj 170 370 mavg;
+#X obj 270 400 s acelyraw;
+#X obj 196 93 cnv 15 301 20 empty empty empty 20 12 0 14 #7e6ae2 #404040
+0;
+#X obj 195 114 cnv 15 300 143 empty empty empty 20 12 0 14 #eeeeee
+#404040 0;
+#X obj 216 175 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-acelx X -9 7 0 10
+#000000 #ffffff #000000 -3.15011 256 0;
+#X obj 217 191 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-acely Y -9 7 0 10
+#000000 #ffffff #000000 0.833418 256 0;
+#X obj 218 208 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-acelz Z -9 7 0 10
+#000000 #ffffff #000000 9.14553 256 0;
+#X obj 216 128 hsl 60 8 0 40 0 0 \$0-senacelcel empty Sencibilidad
+-2 -8 1 10 #000000 #9681b8 #000000 2212 1;
+#X obj 259 230 hsl 82 8 10 -10 0 0 empty \$0-acelx Acelerometro -55
+-67 0 9 #000000 #00f900 #000000 5326 1;
+#X obj 300 140 vsl 8 83 -10 10 0 0 empty \$0-acely MODULO\ ACELERÓMETRO\ M.\ Acc.
+-39 -38 2 12 #000000 #00f900 #ffffff 4442 1;
+#X obj 320 130 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-midx midi\ 0-127
+0 -8 1 9 #fcfcfc #000000 #000000 43 256 0;
+#X obj 216 138 nbx 2 14 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 15 256 0;
+#X obj 320 152 flatgui/knob 32 32 0 127 0 0 empty \$0-acelz empty 0
+-8 0 8 #fcfcfc #000000 #000000 0 0;
+;
+#X text 300 118 Y;
+#X text 245 226 X;
+#X text 40 0 recepcion datos movil MOTO accelerometros;
+#X msg 220 60 15;
+#X text 328 195 z;
+#X obj 370 130 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-midy midi\ 0-127
+0 -8 1 9 #fcfcfc #000000 #000000 121 256 0;
+#X obj 430 130 nbx 4 12 -1e+37 1e+37 0 0 empty \$0-midz midi\ 0-127
+0 -8 1 9 #fcfcfc #000000 #000000 68 256 0;
+#X obj 375 151 bng 15 250 50 0 empty \$0-acelflatupbang Posición\ Flat\ UP
+17 7 1 9 #fcfcfc #2b5473 #000000;
+#X obj 375 171 bng 15 250 50 0 empty \$0-aceldownb Posición\ Flat\ DOWN
+17 7 1 9 #fcfcfc #2b5473 #000000;
+#X obj 190 500 maxlib/scale -10 10 0 127;
+#X obj 30 670 outlet;
+#X floatatom 60 520 5 0 0 0 - - -, f 5;
+#X obj 30 550 clip 1 127;
+#X obj 30 500 maxlib/scale -10 10 0 127;
+#X floatatom 380 530 5 0 0 0 - - -, f 5;
+#X obj 350 550 clip 1 127;
+#X obj 350 500 maxlib/scale -10 10 0 127;
+#X obj 350 680 outlet;
+#X obj 591 650 outlet;
+#X obj 30 580 int;
+#X obj 190 590 int;
+#X obj 349 590 int;
+#X obj 100 420 mavg;
+#X obj 30 420 mavg;
+#X obj 170 420 mavg;
+#X obj 410 235 bng 11 250 50 0 \$0-acelosc empty OSC\ on/off -1 -8
+1 8 #fcfcfc #000000 #000000;
+#X obj 430 235 bng 11 250 50 0 \$0-acelosc1 empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 240 630 s acelzmid;
+#X obj 60 70 r \$0-senacelcel;
+#X obj 63 229 s \$0-d2;
+#X obj 260 350 r \$0-d2;
+#X obj 80 610 s \$0-midx;
+#X obj 230 610 s \$0-midy;
+#X obj 409 610 s \$0-midz;
+#X floatatom 126 109 5 0 0 0 - - -, f 5;
+#X obj 30 460 s \$0-acelx;
+#X obj 100 460 s \$0-acely;
+#X obj 170 460 s \$0-acelz;
+#X obj 80 140 r \$0-acelosc;
+#X obj 80 160 r \$0-acelosc1;
+#X obj 375 190 bng 15 250 50 0 empty \$0-acelupup Posición\ 90º\ \ arriba
+17 7 1 9 #fcfcfc #2b5473 #000000;
+#N canvas 663 151 689 383 \$0-acelflat 0;
+#X floatatom 50 -550 5 0 0 0 - - -, f 5;
+#X obj 50 -610 expr if ($f1 > -1.5 && $f1< 1.5 \, 1 \, 0);
+#X floatatom 310 -560 5 0 0 0 - - -, f 5;
+#X obj 550 -590 expr if ($f1 > 9 && $f1< 9.9 \, 1 \, 0);
+#X floatatom 550 -560 4 0 0 0 - - -, f 4;
+#X obj 50 -500 expr if($f1 == 1 && $f2 == 1 && $f3 == 1 \, 1 \, 0)
+;
+#X obj 50 -380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 120 -450 5 0 0 0 - - -, f 5;
+#X obj 50 -450 change 0;
+#X obj 310 -590 expr if ($f1 > -2 && $f1< 2 \, 1 \, 0);
+#X obj 120 -420 sel 1;
+#X obj 120 -380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#245051 #000000;
+#X obj 50 -633 r \$0-acelx;
+#X obj 310 -620 r \$0-acely;
+#X obj 550 -620 r \$0-acelz;
+#X obj 50 -400 debounce 2000;
+#X obj 170 -320 s \$0-acelflatupbang;
+#X obj 50 -320 s \$0-bangflatup;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 2;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 17 0;
+#X connect 7 0 10 0;
+#X connect 8 0 15 0;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 10 0 16 0;
+#X connect 12 0 1 0;
+#X connect 13 0 9 0;
+#X connect 14 0 3 0;
+#X connect 15 0 6 0;
+#X restore 300 30 pd \$0-acelflat;
+#X obj 481 600 r \$0-bangflatup;
+#N canvas 453 284 725 352 \$0-acelflatdown 0;
+#X floatatom 50 -550 5 0 0 0 - - -, f 5;
+#X obj 50 -610 expr if ($f1 > -1.5 && $f1< 1.5 \, 1 \, 0);
+#X floatatom 310 -560 5 0 0 0 - - -, f 5;
+#X floatatom 560 -560 4 0 0 0 - - -, f 4;
+#X obj 50 -380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 160 -450 5 0 0 0 - - -, f 5;
+#X obj 310 -590 expr if ($f1 > -2 && $f1< 2 \, 1 \, 0);
+#X obj 160 -380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#245051 #000000;
+#X obj 50 -450 change 5;
+#X obj 550 -590 expr if ($f1 < -8 \, 1 \, 0);
+#X obj 160 -420 sel 5;
+#X obj 50 -500 expr if($f1 == 1 && $f2 == 1 && $f3 == 1 \, 5 \, 0)
+;
+#X obj 50 -633 r \$0-acelx;
+#X obj 310 -620 r \$0-acely;
+#X obj 550 -620 r \$0-acelz;
+#X obj 210 -380 s \$0-aceldownb;
+#X obj 50 -350 s \$0-bangaceldown;
+#X obj 50 -420 debounce 2000;
+#X connect 0 0 11 0;
+#X connect 1 0 0 0;
+#X connect 2 0 11 1;
+#X connect 3 0 11 2;
+#X connect 5 0 10 0;
+#X connect 6 0 2 0;
+#X connect 8 0 17 0;
+#X connect 9 0 3 0;
+#X connect 10 0 7 0;
+#X connect 10 0 15 0;
+#X connect 11 0 5 0;
+#X connect 11 0 8 0;
+#X connect 12 0 1 0;
+#X connect 13 0 6 0;
+#X connect 14 0 9 0;
+#X connect 17 0 4 0;
+#X restore 390 30 pd \$0-acelflatdown;
+#X obj 591 600 r \$0-bangaceldown;
+#X text 561 680 un solo bang flat down;
+#X text 431 670 un solo bang flat up;
+#X obj 711 650 outlet;
+#X obj 375 210 bng 15 250 50 0 empty \$0-aceldowndown Posición\ 270º\ abajo
+17 7 1 9 #fcfcfc #2b5473 #000000;
+#X text 711 680 un solo bang 90º arriba;
+#X obj 801 650 outlet;
+#X text 861 680 un solo bang 270º abajo;
+#X obj 365 150 cnv 15 8 80 empty empty empty 20 12 0 14 #363535 #404040
+0;
+#X obj 711 600 r \$0-acelupup;
+#X obj 201 248 cnv 5 32 10 empty empty Acel\ X -1 4 2 7 #ebeaea #980101
+0;
+#X obj 247 248 cnv 5 32 10 empty empty Acel\ Y -1 4 2 7 #ebeaea #980101
+0;
+#X obj 288 248 cnv 5 32 10 empty empty Acel\ Z -1 4 2 7 #ebeaea #980101
+0;
+#X obj 334 248 cnv 5 32 10 empty empty Flat\ up -1 4 2 7 #ebeaea #980101
+0;
+#X obj 374 248 cnv 5 32 10 empty empty Flat\ Down -1 4 2 7 #ebeaea
+#980101 0;
+#X obj 423 248 cnv 5 32 10 empty empty UP\ 90º -1 4 2 7 #ebeaea #980101
+0;
+#X obj 458 248 cnv 5 32 10 empty empty DOWN\ 270º -1 4 2 7 #ebeaea
+#980101 0;
+#N canvas 698 203 565 474 \$0-arriba-abajo 0;
+#X obj 10 30 r \$0-acelx;
+#X obj 160 10 r \$0-acely;
+#X obj 260 10 r \$0-acelz;
+#X floatatom 50 70 5 0 0 0 - - -, f 5;
+#X obj 158 88 > 9;
+#X floatatom 158 118 5 0 0 0 - - -, f 5;
+#X obj 160 150 sel 1;
+#X floatatom 238 118 5 0 0 0 - - -, f 5;
+#X obj 240 150 sel 1;
+#X obj 238 88 < -9;
+#X obj 210 220 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 290 220 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 160 250 s \$0-acelupup;
+#X obj 270 250 s \$0-aceldowndown;
+#X obj 70 290 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 70 220 change 0;
+#X obj 390 290 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 390 220 change 0;
+#X obj 390 250 debounce 2000;
+#X obj 420 280 s \$0-bangdowndown;
+#X obj 100 290 s \$0-bangupup;
+#X obj 70 250 debounce 1000;
+#X text 30 330 dejar claro que el change funciona para dejar solo un
+bang cuando llega a la posicion. Con el select \, envio un bang constate
+\, sirve mas para los led N MAS;
+#X floatatom 303 60 5 0 0 0 - - -, f 5;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 1 0 9 0;
+#X connect 1 0 23 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 15 0;
+#X connect 6 0 10 0;
+#X connect 6 0 12 0;
+#X connect 7 0 8 0;
+#X connect 7 0 17 0;
+#X connect 8 0 11 0;
+#X connect 8 0 13 0;
+#X connect 9 0 7 0;
+#X connect 15 0 21 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 18 0 19 0;
+#X connect 21 0 14 0;
+#X connect 21 0 20 0;
+#X restore 300 50 pd \$0-arriba-abajo;
+#X obj 801 600 r \$0-aceldowndown;
+#X obj 370 645 s audioacely;
+#X obj 50 650 s audioacelx;
+#X obj 730 630 s up90;
+#X obj 820 625 s down270;
+#X text 885 625 envios remotos;
+#X connect 1 0 56 0;
+#X connect 2 0 30 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 6 0 13 0;
+#X connect 7 0 10 0;
+#X connect 7 0 15 0;
+#X connect 8 0 14 0;
+#X connect 10 0 49 0;
+#X connect 11 0 47 0;
+#X connect 13 0 50 0;
+#X connect 14 0 51 0;
+#X connect 21 0 25 0;
+#X connect 30 0 21 0;
+#X connect 36 0 9 0;
+#X connect 36 0 11 0;
+#X connect 39 0 46 0;
+#X connect 40 0 38 0;
+#X connect 40 0 39 0;
+#X connect 42 0 48 0;
+#X connect 43 0 41 0;
+#X connect 43 0 42 0;
+#X connect 43 0 90 0;
+#X connect 46 0 37 0;
+#X connect 46 0 58 0;
+#X connect 47 0 0 0;
+#X connect 47 0 54 0;
+#X connect 47 0 59 0;
+#X connect 48 0 44 0;
+#X connect 48 0 60 0;
+#X connect 49 0 43 0;
+#X connect 49 0 63 0;
+#X connect 50 0 40 0;
+#X connect 50 0 62 0;
+#X connect 50 0 91 0;
+#X connect 51 0 36 0;
+#X connect 51 0 64 0;
+#X connect 55 0 1 0;
+#X connect 55 0 61 0;
+#X connect 57 0 13 1;
+#X connect 57 0 10 1;
+#X connect 57 0 14 1;
+#X connect 57 0 49 1;
+#X connect 57 0 51 1;
+#X connect 57 0 50 1;
+#X connect 69 0 12 0;
+#X connect 71 0 45 0;
+#X connect 80 0 74 0;
+#X connect 80 0 92 0;
+#X connect 89 0 77 0;
+#X connect 89 0 93 0;
+#X coords 0 -1 1 1 311 174 2 191 89;

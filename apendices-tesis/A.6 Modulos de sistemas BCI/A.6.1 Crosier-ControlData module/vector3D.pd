@@ -1,0 +1,170 @@
+#N canvas 244 251 1162 588 12;
+#X obj 50 33 cnv 15 270 20 empty empty Vector\ de\ Rotación\ Modulo\ 3D
+63 6 1 10 #25162d #ffffff 0;
+#X obj 50 50 cnv 15 271 157 empty empty empty 20 12 0 14 #9aa9cb #404040
+0;
+#X obj 751 554 nbx 3 10 0 0 0 0 empty empty pi\ rad 26 -61 2 10 #fcfcfc
+#000000 #991d1d 0 256 3;
+#X obj 350 30 inlet;
+#X obj 410 30 inlet;
+#X obj 470 30 inlet;
+#X obj 530 30 inlet;
+#X obj 730 31 inlet;
+#X obj 790 31 inlet;
+#X obj 850 31 inlet;
+#X obj 910 31 inlet;
+#X floatatom 350 100 5 0 0 0 - - -, f 5;
+#X floatatom 410 100 5 0 0 0 - - -, f 5;
+#X floatatom 470 100 5 0 0 0 - - -, f 5;
+#X floatatom 530 100 5 0 0 0 - - -, f 5;
+#X obj 350 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 410 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 470 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 530 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 730 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 35 35;
+#X obj 790 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 36;
+#X obj 850 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 37 37;
+#X obj 910 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 38 38;
+#X floatatom 730 100 5 0 0 0 - - -, f 5;
+#X floatatom 790 100 5 0 0 0 - - -, f 5;
+#X floatatom 850 100 5 0 0 0 - - -, f 5;
+#X floatatom 910 100 5 0 0 0 - - -, f 5;
+#X obj 168 117 image 3da.jpg 0;
+#X obj 170 100 tgl 21 0 empty cup1 CE1 1 28 2 10 #000000 #ffffff #000000
+0 1;
+#X obj 350 180 s cup1;
+#X obj 350 220 expr if ($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 350 250 s cup2;
+#X obj 130 70 tgl 14 0 empty cup2 CE2 -5 20 0 10 #000000 #fffafa #ffffff
+0 1;
+#X obj 350 300 expr if ($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 351 332 s cup3;
+#X obj 179 58 tgl 12 0 empty cup3 CE3 -17 4 2 9 #000000 #ffffff #ffffff
+0 1;
+#X obj 350 420 s cup4;
+#X obj 230 70 tgl 14 0 empty cup4 CE4 17 7 2 10 #000000 #fffafa #ffffff
+0 1;
+#X obj 350 390 expr if ($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 350 150 expr if($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 370 130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 370 200 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 360 280 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 350 370 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 737 188 expr if($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 757 168 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 737 218 s cup5;
+#X obj 170 160 tgl 21 0 empty cup5 CE5 1 26 2 10 #fcfcfc #000000 #ffffff
+0 1;
+#X obj 730 270 expr if($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 750 250 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 730 300 s cup6;
+#X obj 126 136 tgl 14 0 empty cup6 CE6 -2 20 0 10 #fcfcfc #000000 #ffffff
+0 1;
+#X obj 730 350 expr if($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 750 330 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 730 390 s cup7;
+#X obj 200 120 tgl 9 0 empty cup7 CE7 2 -9 0 8 #fcfcfc #000000 #ffffff
+0 1;
+#X obj 229 136 tgl 14 0 empty cup8 CE8 -1 17 0 10 #fcfcfc #000000 #fffafa
+0 1;
+#X obj 740 440 expr if($f1 == 1 && $f2 == 0 \, 1 \, 0);
+#X obj 760 420 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 740 470 s cup8;
+#X obj 350 520 outlet;
+#X obj 420 520 outlet;
+#X obj 500 520 outlet;
+#X obj 570 520 outlet;
+#X obj 690 520 outlet;
+#X obj 750 520 outlet;
+#X obj 820 520 outlet;
+#X obj 880 520 outlet;
+#X obj 350 490 r cup1;
+#X obj 420 493 r cup2;
+#X obj 500 490 r cup3;
+#X obj 570 490 r cup4;
+#X obj 690 490 r cup5;
+#X obj 750 490 r cup6;
+#X obj 820 490 r cup7;
+#X obj 880 490 r cup8;
+#X obj 300 60 vsl 9 130 0 127 0 0 empty vectorslider espacio\ 360°
+-221 119 1 9 #000000 #25ab1c #fffafa 7055 1;
+#X connect 3 0 15 0;
+#X connect 4 0 16 0;
+#X connect 5 0 17 0;
+#X connect 6 0 18 0;
+#X connect 7 0 19 0;
+#X connect 8 0 20 0;
+#X connect 9 0 21 0;
+#X connect 10 0 22 0;
+#X connect 11 0 39 0;
+#X connect 11 0 44 0;
+#X connect 12 0 30 0;
+#X connect 12 0 48 0;
+#X connect 13 0 33 0;
+#X connect 13 0 52 0;
+#X connect 14 0 38 0;
+#X connect 14 0 57 0;
+#X connect 15 0 11 0;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 14 0;
+#X connect 19 0 23 0;
+#X connect 20 0 24 0;
+#X connect 21 0 25 0;
+#X connect 22 0 26 0;
+#X connect 23 0 33 1;
+#X connect 23 0 42 0;
+#X connect 24 0 39 1;
+#X connect 24 0 40 0;
+#X connect 24 0 30 1;
+#X connect 24 0 41 0;
+#X connect 24 0 38 1;
+#X connect 24 0 43 0;
+#X connect 25 0 44 1;
+#X connect 25 0 45 0;
+#X connect 25 0 48 1;
+#X connect 25 0 49 0;
+#X connect 25 0 52 1;
+#X connect 25 0 53 0;
+#X connect 25 0 57 1;
+#X connect 30 0 31 0;
+#X connect 33 0 34 0;
+#X connect 38 0 36 0;
+#X connect 39 0 29 0;
+#X connect 40 0 39 0;
+#X connect 41 0 30 0;
+#X connect 42 0 33 0;
+#X connect 43 0 38 0;
+#X connect 44 0 46 0;
+#X connect 45 0 44 0;
+#X connect 48 0 50 0;
+#X connect 49 0 48 0;
+#X connect 52 0 54 0;
+#X connect 53 0 52 0;
+#X connect 57 0 59 0;
+#X connect 58 0 57 0;
+#X connect 68 0 60 0;
+#X connect 69 0 61 0;
+#X connect 70 0 62 0;
+#X connect 71 0 63 0;
+#X connect 72 0 64 0;
+#X connect 73 0 65 0;
+#X connect 74 0 66 0;
+#X connect 75 0 67 0;
+#X coords 0 -1 1 1 288 182 2 43 29;
