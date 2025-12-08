@@ -150,6 +150,12 @@ This repository is licensed under:
 ✔ No commercial use  
 ✔ Share-alike for derivatives  
 
+📄 **Additional Legal Notice**
+
+This project includes patches, code, and artistic materials that contain original creative content.  
+Please refer to the accompanying **NOTICE.txt** file for additional copyright and attribution information.  
+By using or adapting any part of this repository, you agree to comply with both the **LICENSE** and **NOTICE.txt** terms.
+
 ---
 
 ## 🌐 Spanish Version
