@@ -1,43 +1,47 @@
-NOTICE  
+NOTICE
 Copyright (c) 2020–2025 Juan Posada
 
-This project, “Biointeractive Multimodal Music Systems Performance Lab”,  
-contains original creative works, including but not limited to:  
-• Musical compositions, scores, performance structures  
-• Artistic text, conceptual descriptions, diagrams, and system designs  
-• Pure Data (PD) patches, Processing code, and related software tools  
-• Technical documents, research materials, and interaction models  
-• Multimedia instructions, mappings, and performance frameworks
+This project, “Biointeractive Multimodal Music Systems Performance Lab”,
+includes original artistic, musical, technical, and software materials,
+including but not limited to:
 
-All materials in this repository are protected by copyright law.  
-The content is licensed under the Creative Commons  
-CC BY-NC-SA 4.0 (Attribution–NonCommercial–ShareAlike).
+• Musical compositions, scores, performance structures, and artistic texts  
+• Conceptual descriptions, diagrams, system architectures and interaction models  
+• Pure Data (PD) patches, Processing sketches and related software tools  
+• Documentation, research outputs, technical manuals and multimodal mappings  
+• Multimedia instructions, performance frameworks and mixed-media materials  
 
-Users of this repository must respect the following conditions:
+All content in this repository is protected by copyright law and is licensed
+under the Creative Commons license: CC BY-NC-SA 4.0  
+(Attribution – NonCommercial – ShareAlike).
 
-1. Attribution  
-   Proper credit must be given to:
-   **Juan Posada – Sonic Architecture / Biointeractive Systems**  
-   including citation in academic or artistic derivatives.
+Users of this repository must comply with the following conditions:
 
-2. Non-Commercial Use  
-   No files, patches, structures, diagrams, texts, or musical materials  
-   may be used for commercial purposes without explicit written permission.
+1. **Attribution**  
+   Proper credit must be given to:  
+   **Juan Posada – Sonic Architecture / Biointeractive Systems**,  
+   including citation in any academic, artistic, or research-based derivative work.
 
-3. Share-Alike  
-   Any derivative work, adaptation, translation, modification, or remix  
-   must be distributed under the same CC BY-NC-SA 4.0 license.
+2. **Non-Commercial Use**  
+   None of the files, patches, diagrams, texts, scores, mappings, or musical
+   materials may be used for commercial purposes without explicit written
+   permission from the author.
 
-4. Additional Notice for Software Components  
-   Pure Data patches, Processing sketches, OSC tools, and related code  
-   may incorporate or reference open-source libraries.  
-   Their respective original licenses (MIT, BSD, GPL, etc.)  
-   continue to apply where indicated in source files.
+3. **Share-Alike Requirement**  
+   Any derivative, adaptation, modification, translation, or remix must be
+   distributed under the same CC BY-NC-SA 4.0 license.
 
-5. Moral Rights  
-   The author retains moral rights over the artistic and musical content,  
-   including the right to integrity of the work and proper attribution.
+4. **Software Components**  
+   Pure Data patches, Processing code and OSC utilities may reference or include
+   external open-source libraries.  
+   Their respective licenses (MIT, BSD, GPL, etc.) remain applicable where stated
+   in the source files.
 
-For full terms, see the LICENSE file included in this repository.
-For questions or permissions beyond this license, please contact:
+5. **Moral Rights**  
+   The author retains moral rights over the artistic, musical and conceptual work,
+   including the right to integrity, proper attribution and protection against
+   misrepresentation.
+
+Refer to the LICENSE file included in the repository for the full legal terms.  
+For permissions beyond this license, please contact:  
 juanposada.sonicarchitecture@gmail.com
