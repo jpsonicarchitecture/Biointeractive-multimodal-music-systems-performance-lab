@@ -7,40 +7,23 @@ del dispositivo Muse para sistemas BCI y MMHCI.
 
 ### Patches
 - `0 MuseData v 4.0.pd – Patch principal del módulo base MUSE DATA
-
-bangtac.pd – Control de eventos táctiles
-
-museacc.pd – Procesamiento de aceleración
-
-musealpha.pd – Banda alfa (EEG)
-
-musebeta.pd – Banda beta (EEG)
-
-musedelta.pd – Banda delta (EEG)
-
-musegamma.pd – Banda gamma (EEG)
-
-musegyr.pd – Procesamiento de datos de giroscopio
-
-MuseIMmov.pd – Inicialización del módulo de movimiento
-
-musetheta.pd – Banda theta (EEG)
-
-randsamples.pd – Patch para selección aleatoria de samples
-
-raweeg.pd – Lectura/gestión de valores EEG
-
-setrango.pd – Ajuste de rangos y umbrales
-
-setrango1.pd – Variación alternativa de ajuste de rango
-
-starlight-help.pd – Ayuda/guía para operación de starlight
-
-starlight.pd – Sistema o procedimiento starlight
-
-wtable-help.pd – Ayuda para el uso de tablas
-
-wtable.pd – Gestión de tablas
+	•	bangtac.pd – Control de eventos táctiles
+	•	museacc.pd – Procesamiento de aceleración
+	•	musealpha.pd – Procesamiento de la banda alfa (EEG)
+	•	musebeta.pd – Procesamiento de la banda beta (EEG)
+	•	musedelta.pd – Procesamiento de la banda delta (EEG)
+	•	musegamma.pd – Procesamiento de la banda gamma (EEG)
+	•	musegyr.pd – Procesamiento de giroscopio
+	•	MuseIMmov.pd – Inicialización del módulo de movimiento
+	•	musetheta.pd – Procesamiento de la banda theta (EEG)
+	•	randsamples.pd – Selección aleatoria de samples
+	•	raweeg.pd – Lectura/gestión de datos EEG
+	•	setrango.pd / setrango1.pd – Ajuste de rangos/umbrales
+	•	starlight.pd / starlight-help.pd – Patch y ayuda para starlight
+	•	wtable.pd / wtable-help.pd – Patch y ayuda para tablas
+Recursos
+	•	Carpetas de sonido: Samples/, snd_MUSE/ (descargar externamente)
+	•	Imágenes: brain.png, cuadrante.jpg, cuadrante copy.jpg, cyber-mind-3.jpg, head1.jpg
 
 ### Patches MUSE DATA IM MOV
 - `MuseDataIMmov_Main.pd` - Patch principal del módulo de movimiento
