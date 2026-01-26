@@ -6,13 +6,41 @@ del dispositivo Muse para sistemas BCI y MMHCI.
 ## Archivos principales
 
 ### Patches
-- `0 MuseData v 4.0.pd` - Patch principal de adquisición y control de señales Muse
-- `oscMuseIn.pd` - Gestión de comunicación OSC con Muse Monitor
-- `EEG_processing.pd` - Procesamiento de señales EEG
-- `PPG_processing.pd` - Procesamiento de señal PPG
-- `fNIRS_processing.pd` - Procesamiento de datos fNIRS
-- `mapping_PMson.pd` - Mapeo de parámetros para sonificación
-- `sendOSC_out.pd` - Envío de datos procesados vía OSC
+- `0 MuseData v 4.0.pd – Patch principal del módulo base MUSE DATA
+
+bangtac.pd – Control de eventos táctiles
+
+museacc.pd – Procesamiento de aceleración
+
+musealpha.pd – Banda alfa (EEG)
+
+musebeta.pd – Banda beta (EEG)
+
+musedelta.pd – Banda delta (EEG)
+
+musegamma.pd – Banda gamma (EEG)
+
+musegyr.pd – Procesamiento de datos de giroscopio
+
+MuseIMmov.pd – Inicialización del módulo de movimiento
+
+musetheta.pd – Banda theta (EEG)
+
+randsamples.pd – Patch para selección aleatoria de samples
+
+raweeg.pd – Lectura/gestión de valores EEG
+
+setrango.pd – Ajuste de rangos y umbrales
+
+setrango1.pd – Variación alternativa de ajuste de rango
+
+starlight-help.pd – Ayuda/guía para operación de starlight
+
+starlight.pd – Sistema o procedimiento starlight
+
+wtable-help.pd – Ayuda para el uso de tablas
+
+wtable.pd – Gestión de tablas
 
 ### Patches MUSE DATA IM MOV
 - `MuseDataIMmov_Main.pd` - Patch principal del módulo de movimiento
