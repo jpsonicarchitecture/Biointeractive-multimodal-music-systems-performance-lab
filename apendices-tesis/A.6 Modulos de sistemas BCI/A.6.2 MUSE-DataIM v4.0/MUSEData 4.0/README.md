@@ -6,21 +6,34 @@ del dispositivo Muse para sistemas BCI y MMHCI.
 ## Archivos principales
 
 ### Patches
-- `0 MuseData v 4.0.pd – Patch principal del módulo base MUSE DATA
-	•	bangtac.pd – Control de eventos táctiles
-	•	museacc.pd – Procesamiento de aceleración
-	•	musealpha.pd – Procesamiento de la banda alfa (EEG)
-	•	musebeta.pd – Procesamiento de la banda beta (EEG)
-	•	musedelta.pd – Procesamiento de la banda delta (EEG)
-	•	musegamma.pd – Procesamiento de la banda gamma (EEG)
-	•	musegyr.pd – Procesamiento de giroscopio
-	•	MuseIMmov.pd – Inicialización del módulo de movimiento
-	•	musetheta.pd – Procesamiento de la banda theta (EEG)
-	•	randsamples.pd – Selección aleatoria de samples
-	•	raweeg.pd – Lectura/gestión de datos EEG
-	•	setrango.pd / setrango1.pd – Ajuste de rangos/umbrales
-	•	starlight.pd / starlight-help.pd – Patch y ayuda para starlight
-	•	wtable.pd / wtable-help.pd – Patch y ayuda para tablas
+## Archivos principales
+
+### Patches
+- 0 MuseData v 4.0.pd - Patch principal del módulo base MUSE DATA
+- bangtac.pd - Control de eventos táctiles
+- museacc.pd - Procesamiento de aceleración
+- musealpha.pd - Procesamiento de la banda alfa (EEG)
+- musebeta.pd - Procesamiento de la banda beta (EEG)
+- musedelta.pd - Procesamiento de la banda delta (EEG)
+- musegamma.pd - Procesamiento de la banda gamma (EEG)
+- musegyr.pd - Procesamiento de datos de giroscopio
+- MuseIMmov.pd - Inicialización del módulo de movimiento (IM MOV)
+- musetheta.pd - Procesamiento de la banda theta (EEG)
+- randsamples.pd - Selección aleatoria de samples
+- raweeg.pd - Lectura y gestión de datos EEG
+- setrango.pd - Ajuste de rangos y umbrales
+- setrango1.pd - Ajuste alternativo de rangos
+- starlight.pd - Sistema starlight
+- starlight-help.pd - Archivo de ayuda del sistema starlight
+- wtable.pd - Gestión de tablas
+- wtable-help.pd - Archivo de ayuda para tablas
+
+### Recursos
+- Samples - Carpeta de archivos de audio (descarga externa)
+- snd_MUSE - Recursos sonoros del módulo Muse
+- brain.png - Imagen de referencia cerebral
+- cuadrante.jpg - Diagrama de cuadrantes
+
 Recursos
 	•	Carpetas de sonido: Samples/, snd_MUSE/ (descargar externamente)
 	•	Imágenes: brain.png, cuadrante.jpg, cuadrante copy.jpg, cyber-mind-3.jpg, head1.jpg
