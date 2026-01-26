@@ -1,76 +1,72 @@
 # A.6.2 MUSE-DataIM v4.0
 
-Modulo de adquisición e interacción EEG con dispositivos Muse y Muse Athena.
+EEG acquisition and interaction module using Muse and Muse Athena devices.
 
-## Archivos principales
-
-### Patches
-## Archivos principales
+## Main Files
 
 ### Patches
-- 0 MuseData v 4.0.pd - Patch principal del módulo base MUSE DATA --> Principal
-- bangtac.pd - Control de eventos táctiles
-- museacc.pd - Procesamiento de aceleración
-- musealpha.pd - Procesamiento de la banda alfa (EEG)
-- musebeta.pd - Procesamiento de la banda beta (EEG)
-- musedelta.pd - Procesamiento de la banda delta (EEG)
-- musegamma.pd - Procesamiento de la banda gamma (EEG)
-- musegyr.pd - Procesamiento de datos de giroscopio
-- MuseIMmov.pd - Inicialización del módulo de movimiento (IM MOV)
-- musetheta.pd - Procesamiento de la banda theta (EEG)
-- randsamples.pd - Selección aleatoria de samples
-- raweeg.pd - Lectura y gestión de datos EEG
-- setrango.pd - Ajuste de rangos y umbrales
-- setrango1.pd - Ajuste alternativo de rangos
-- starlight.pd - Sistema starlight
-- starlight-help.pd - Archivo de ayuda del sistema starlight
-- wtable.pd - Gestión de tablas
-- wtable-help.pd - Archivo de ayuda para tablas
+- 0 MuseData v 4.0.pd - Main patch of the MUSE DATA base module --> Main
+- bangtac.pd - Tactile event control
+- museacc.pd - Acceleration processing
+- musealpha.pd - Alpha band processing (EEG)
+- musebeta.pd - Beta band processing (EEG)
+- musedelta.pd - Delta band processing (EEG)
+- musegamma.pd - Gamma band processing (EEG)
+- musegyr.pd - Gyroscope data processing
+- MuseIMmov.pd - Movement module initialization (IM MOV)
+- musetheta.pd - Theta band processing (EEG)
+- randsamples.pd - Random sample selection
+- raweeg.pd - Raw EEG data acquisition and management
+- setrango.pd - Range and threshold adjustment
+- setrango1.pd - Alternative range adjustment
+- wtable.pd - Wavetable synthesis
+- wtable-help.pd - Wavetable help file
 
-### Recursos
-- Samples - Carpeta de archivos de audio (descarga externa)
-- snd_MUSE - Recursos sonoros del módulo Muse disponible para desacrga en Drive
-- brain.png - Imagen de referencia cerebral
-- 
-### Patches DEL MODULO MUSEDataIMMOV
-- `MuseDataIMmov_Main.pd` - Patch principal del módulo de movimiento
-- `headRotation.pd` - Procesamiento de rotación de cabeza
-- `motionThresholds.pd` - Control de umbrales de movimiento
-- `vectorMapping3D.pd` - Mapeo tridimensional de parámetros
-- `IM_sendOSC.pd` - Envío OSC de datos de movimiento
+### Resources
+- Samples - Audio files folder (external download)
+- snd_MUSE - Muse module sound resources available for download via Drive
+- brain.png - Brain reference image
 
-### Ver manual de referencia A.4 para configuración y uso del sistema MUSEData v 4.0
+### MUSEDataIMMOV MODULE Patches
+- `MuseDataIMmov_Main.pd` - Main movement module patch
+- `headRotation.pd` - Head rotation processing
+- `motionThresholds.pd` - Movement threshold control
+- `vectorMapping3D.pd` - 3D parameter mapping
+- `IM_sendOSC.pd` - OSC transmission of motion data
+
+### See reference manual A.4 for configuration and usage of the MUSEData v 4.0 system
 https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
 
-## Recursos
-- Imágenes de referencia del sistema
-- Archivos de audio y samples (disponibles mediante enlace externo)
+## Resources
+- System reference images
+- Audio files and samples (available via external link)
 
-## Dependencias
-- Pure Data / Purr Data versión 2.19 o superior
-- Librerías incluidas en la versión estándar de Purr Data
-- Dispositivo Muse v3 o Muse Athena
-- Aplicación Muse Monitor, disponible en Android Store o apple Store
+## Dependencies
+- Pure Data / Purr Data version 2.19 or higher
+- Libraries included in the standard Purr Data distribution
+- Muse v3 or Muse Athena device
+- Muse Monitor application, available on Android Store or Apple Store  
 https://play.google.com/store/apps/details?id=com.sonicPenguins.museMonitor
 
-## Uso básico
-1. Abrir `0 MuseData v 4.0.pd`
-2. Conectar el dispositivo Muse
-3. Conectar computadora y smartphone a la misma red WLAN
-4. Configurar direcciones OSC y puertos según el manual
-5. Ejecutar el patch principal
+## Basic Usage
+1. Open `0 MuseData v 4.0.pd`
+2. Connect the Muse device
+3. Connect computer and smartphone to the same WLAN network
+4. Configure OSC addresses and ports according to the manual
+5. Run the main patch
 
-## Parámetros ajustables
-- Sensibilidad de señales EEG RAW
-- Sensibilidad de señales EEG PSD
-- Rangos de mapeo de parámetros
-- Configuración de envío OSC
+## Adjustable Parameters
+- EEG RAW signal sensitivity
+- EEG PSD signal sensitivity
+- Parameter mapping ranges
+- OSC transmission configuration
 
-## Versión
-v4.0 - Diciembre 2025
+## Version
+v4.0 - December 2025
 
-## Autor
-Juan Pablo Posada  alvarez
-- Contacto: juanerrante@gmail.com  
-- Laboratorio: Biointeractive Multimodal Music Systems Performance Lab
+## Author
+Juan Pablo Posada Alvarez  
+- Contact: juanerrante@gmail.com  
+- Laboratory: Biointeractive Multimodal Music Systems Performance Lab
+
 
