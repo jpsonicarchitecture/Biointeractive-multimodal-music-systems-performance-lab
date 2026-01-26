@@ -68,9 +68,8 @@ https://play.google.com/store/apps/details?id=com.sonicPenguins.museMonitor
 6. Para control por movimiento, cargar el módulo MUSE DATA IM MOV
 
 ## Parámetros ajustables
-- Sensibilidad de señales EEG, PPG y fNIRS
+- Sensibilidad de señales EEG
 - Rangos de mapeo de parámetros
-- Umbrales de detección de movimiento
 - Configuración de envío OSC
 
 ## Versión
