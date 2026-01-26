@@ -1,1 +1,99 @@
+# A.6.2 MUSE-DataIM v4.0
+
+Este módulo corresponde a un sistema de adquisición, análisis y mapeo de datos
+fisiológicos y de movimiento del dispositivo **Muse** version Athena (InteraXon), desarrollado
+en **Pure Data / Purr Data**, y forma parte de los apéndices técnicos de la tesis
+doctoral sobre sistemas biointeractivos multimodales (MMHCI) aplicados a la
+composición y performance electroacústica.
+
+El contenido de este apartado integra el módulo **MUSE-DataIM**, junto con su
+extensión **MUSE-DataIM MOV**, orientada al procesamiento de datos de movimiento
+de la cabeza y sensores complementarios.
+
+---
+
+## Contenido del módulo
+
+El módulo **A.6.2 MUSE-DataIM v4.0** incluye:
+
+- **MUSE-DataIM**  
+  Módulo principal de adquisición y procesamiento de datos fisiológicos
+  dispositivo Muse, incluyendo señales EEG
+  según disponibilidad del dispositivo y la configuración del sistema).
+
+- **MUSE-DataIM MOV**  
+  Módulo complementario orientado al análisis y mapeo de datos de movimiento de la
+  cabeza, derivados de los sensores inerciales del dispositivo Muse, integrados
+  dentro del mismo entorno de procesamiento asi como sensore PPG y fNIRS
+
+Ambos módulos se encuentran **vinculados dentro del patch**, permitiendo una
+integración multimodal de señales fisiológicas y de movimiento para sistemas de
+interacción sonora y musical.
+
+---
+
+## Dependencia entre módulos
+
+La relación funcional entre los módulos es la siguiente:
+
+- **MUSE-Data puede utilizarse de forma independiente**, sin necesidad de
+  cargar el módulo de movimiento (**MUSE-DataIM MOV**).
+
+- **MUSE-DataIM MOV requiere obligatoriamente del módulo MUSE-DataIM dentro del PATCH e**, ya que depende de los flujos de datos y de la estructura
+  base de adquisición y control definidos en el módulo principal.
+
+Esta arquitectura modular permite flexibilidad en el diseño de sistemas BCI,
+adaptándose tanto a configuraciones fisiológicas simples como a escenarios
+multimodales más complejos.
+
+---
+
+## Requisitos de software externo
+
+Para la correcta adquisición de datos desde el dispositivo Muse, es necesario
+utilizar la aplicación **Mind Monitor** en un dispositivo Android:
+
+- **Mind Monitor (Android)**  
+  https://play.google.com/store/apps/details?id=com.sonicPenguins.museMonitor
+
+Esta aplicación permite la transmisión de los datos del dispositivo Muse vía OSC,
+los cuales son recibidos y procesados por los patches de Pure Data incluidos en
+este módulo.
+
+---
+
+## Configuración de puertos y comunicación OSC
+
+La configuración de puertos, direcciones OSC y parámetros de comunicación entre
+**Mind Monitor** y **MUSE-DataIM** debe realizarse siguiendo las indicaciones
+descritas en el manual del repositorio:
+
+- **Muse Data – Manual del Repositorio (EN)**  
+  https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
+
+Este manual detalla:
+- configuración de puertos OSC,
+- parámetros de transmisión,
+- estructura de mensajes,
+- y procedimientos de verificación del flujo de datos.
+
+---
+
+## Uso general
+
+1. Instalar y configurar la aplicación **Mind Monitor** en el dispositivo Android.
+2. Configurar los puertos OSC según el manual indicado.
+3. Abrir el patch principal de **MUSE-DataIM** en Pure Data / Purr Data.
+4. (Opcional) Cargar el módulo **MUSE-DataIM MOV** para habilitar el procesamiento
+   de datos de movimiento.
+5. Ejecutar el sistema y verificar la recepción de datos en tiempo real.
+
+---
+
+## Contexto académico
+
+Este módulo ha sido desarrollado como parte de un laboratorio de sistemas
+biointeractivos multimodales, orientado a la exploración de interfaces
+cerebro-computadora (BCI), interacción fisiológica y diseño de obras mixtas y
+electroacústicas performáticas.
 
