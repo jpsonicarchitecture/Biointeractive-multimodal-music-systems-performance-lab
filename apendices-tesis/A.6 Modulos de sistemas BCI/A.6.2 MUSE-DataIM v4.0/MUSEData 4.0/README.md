@@ -34,7 +34,7 @@ EEG acquisition and interaction module using Muse and Muse Athena devices.
 - `vectorMapping3D.pd` - 3D parameter mapping
 - `IM_sendOSC.pd` - OSC transmission of motion data
 
-### See reference manual A.4 for configuration and usage of the MUSEData v 4.0 system
+### See reference manual A.4 for configuration and usage of the MUSEDataIM-MOV 4.0 
 https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
 
 ## Resources
