@@ -1,101 +1,62 @@
 # A.6.2 MUSE-DataIM v4.0
 
-Sistema modular para la adquisición, procesamiento e interacción multimodal a partir de datos neurofisiológicos y biométricos del dispositivo **Muse** (EEG, PPG, fNIRS y movimiento de cabeza), orientado a sistemas MMHCI y a la composición y performance electroacústica interactiva.
-
-El sistema está compuesto por dos módulos principales interrelacionados:
-
-- **MUSE DATA**: módulo base para la recepción y procesamiento de datos fisiológicos.
-- **MUSE DATA IM MOV**: módulo complementario para el control mediante movimiento de la cabeza, dependiente del módulo MUSE DATA.
-
----
-
-## Estructura general del sistema
-
-- **MUSE DATA** puede utilizarse de forma autónoma.
-- **MUSE DATA IM MOV** **requiere obligatoriamente** que el módulo **MUSE DATA** esté cargado y activo.
-- Ambos módulos se integran dentro de un mismo flujo de datos y arquitectura de interacción en Pure Data / Purr Data.
-
----
+Sistema de adquisición, procesamiento e interacción multimodal de datos
+neurofisiológicos y de movimiento del dispositivo Muse para entornos BCI y MMHCI.
 
 ## Archivos principales
 
 ### Patches – MUSE DATA
-- `MUSEData_Main.pd` – Patch principal de adquisición y control de datos Muse
+- `0 MuseData v 4.0.pd` – Patch principal de adquisición y control de señales
 - `oscMuseIn.pd` – Recepción de datos OSC desde la aplicación Muse Monitor
 - `EEG_processing.pd` – Procesamiento de bandas EEG
 - `PPG_processing.pd` – Procesamiento de señal PPG
-- `fNIRS_processing.pd` – Procesamiento de datos fNIRS
-- `mapping_PMson.pd` – Mapeo de parámetros para sonificación e interacción
-- `sendOSC_out.pd` – Envío de datos procesados a otros sistemas o módulos
+- `fNIRS_processing.pd` – Procesamiento de datos fNIRS (según disponibilidad)
+- `mapping_PMson.pd` – Mapeo de parámetros para sonificación interactiva
+- `sendOSC_out.pd` – Envío de datos procesados a otros módulos o sistemas externos
 
 ### Patches – MUSE DATA IM MOV
-- `MuseDataIMmov_Main.pd` – Patch principal de interacción por movimiento
-- `headRotation.pd` – Cálculo de orientación de la cabeza
-- `motionThresholds.pd` – Definición de umbrales gestuales
-- `vectorMapping3D.pd` – Mapeo espacial tridimensional
+- `MuseDataIMmov_Main.pd` – Patch principal del módulo de movimiento
+- `headRotation.pd` – Cálculo de orientación de la cabeza a partir de sensores
+- `motionThresholds.pd` – Definición de umbrales de movimiento
+- `vectorMapping3D.pd` – Mapeo tridimensional para interacción por movimiento
 - `IM_sendOSC.pd` – Envío de datos de movimiento vía OSC
 
----
+## Ver manual de referencia
+- MUSE Data – Manual del repositorio (configuración OSC, parámetros y uso):  
+  https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
+
+## Recursos
+- Imágenes incluidas en el módulo para referencia visual e interfaz
+- Recursos sonoros / samples disponibles a través de enlace externo documentado
+  en el README principal de este módulo
 
 ## Dependencias
-
-- **Software**
-  - Pure Data (Purr Data) versión **2.19 o superior**
-  - Librerías incluidas en la distribución de Purr Data
-
-- **Hardware**
-  - Dispositivo **Muse** (Muse 2 / Muse S)
-  - Smartphone o tablet Android
-
-- **Aplicación requerida**
-  - **Muse Monitor**
-  - Disponible en Google Play:  
-    https://play.google.com/store/apps/details?id=com.sonicPenguins.museMonitor
-
----
-
-## Configuración y comunicación OSC
-
-La correcta configuración de direcciones IP y puertos OSC entre el dispositivo móvil y la computadora es **imprescindible** para el funcionamiento del sistema.
-
-Los pasos detallados de configuración se encuentran descritos en el manual del repositorio:
-
-📄 **Manual MUSE DATA**  
-https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
-
----
+- Pure Data / Purr Data versión 2.19 o superior
+- Librerías incluidas en la distribución estándar de Purr Data
+- Dispositivo Muse (EEG con sensores integrados)
+- Aplicación Android: **Muse Monitor**  
+  https://play.google.com/store/apps/details?id=com.sonicPenguins.museMonitor
 
 ## Uso básico
-
-1. Conectar el dispositivo Muse al smartphone mediante Bluetooth.
-2. Abrir la aplicación **Muse Monitor** y configurar el envío OSC.
-3. Conectar el smartphone y la computadora a la misma red WLAN.
-4. Abrir `MUSEData_Main.pd`.
-5. (Opcional) Abrir `MuseDataIMmov_Main.pd` para control por movimiento de cabeza.
-6. Verificar la recepción de datos y ajustar parámetros según la obra o sistema interactivo.
-
----
+1. Abrir `0 MuseData v 4.0.pd`
+2. Instalar y ejecutar **Muse Monitor** en un dispositivo Android
+3. Conectar el dispositivo Muse y la computadora a la misma red WLAN
+4. Configurar direcciones OSC y puertos según el manual
+5. Ejecutar el patch principal
+6. Para control mediante movimiento de cabeza, abrir `MuseDataIMmov_Main.pd`
 
 ## Parámetros ajustables
-
-- Ganancia y suavizado de señales EEG, PPG y fNIRS
-- Umbrales de activación fisiológica
-- Rangos de mapeo sonoro (PMson)
-- Sensibilidad y zonas de activación por movimiento de cabeza
-- Frecuencia de envío OSC
-
----
+- Rangos y umbrales de señales EEG, PPG, fNIRS
+- Sensibilidad de mapeo de parámetros
+- Rango de activación de gestos de movimiento
+- Frecuencia y dirección de envío OSC
+- Umbrales de detección de eventos y filtrado de datos
 
 ## Versión
-
-**v4.0 – Enero 2026**
-
----
+v4.0 – Enero 2026
 
 ## Autor
-
-**Juan Pablo Posada**  
-Doctorado en Artes / Sistemas MMHCI y Biointeracción  
-
+Juan Pablo Posada  
 - Contacto: juanerrante@gmail.com  
-- Laboratorio: **Biointeractive Multimodal Music Systems Performance Lab**
+- Laboratorio: Biointeractive Multimodal Music Systems Performance Lab
+
