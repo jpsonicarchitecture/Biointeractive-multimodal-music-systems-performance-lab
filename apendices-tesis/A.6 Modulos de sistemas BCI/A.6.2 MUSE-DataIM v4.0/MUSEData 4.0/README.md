@@ -35,7 +35,7 @@ EEG acquisition and interaction module using Muse and Muse Athena devices.
 - `IM_sendOSC.pd` - OSC transmission of motion data
 
 ### See reference manual A.4 for configuration and usage of the MUSEDataIM-MOV 4.0 
-https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf
+https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/A.4.2%20MUSE-DataIMmov%20v4.0/MuseDataIMMOVl-repositorio-EN.pdf
 
 ## Resources
 - System reference images
