@@ -64,7 +64,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.7.2 MUSE-DataIMmov v5.0 fNIRS](./apendices-tesis/A.7.%20Módulos%20desarrollados%20en%20Pure%20Data%20—%20Sistemas%20MuCI/A.7.2%20MUSE-DataIMmov%20v5.0%20fNIRS)
 
 ### A.8. Modelos 3D de Crosier-Control
-- A.8.1 Archivos STL para impresión 3D
+- A.8.1 Archivos f3D para Fusion 360 del Modelo de impresión en 3D
 - A.8.2 Modelos estructurales del DMI Crosier-Control
 - A.8.3 Instrucciones de ensamblaje
 
