@@ -1,0 +1,369 @@
+#N canvas 30 23 1410 754 12;
+#X floatatom 379 -58 5 0 0 0 - - -, f 5;
+#X obj 422 338 bng 34 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#00f800 #000000;
+#X obj 489 336 bng 36 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#fc9000 #000000;
+#X obj 554 336 bng 35 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#942090 #000000;
+#X obj 414 66 mavg 3;
+#X obj 623 334 bng 35 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 422 310 mmgsplit, f 24;
+#X obj 592 284 hsl 128 15 500 2000 0 0 empty empty Retardo\ entre\\\\\ triggers
+-2 -8 0 10 #fcfcfc #000000 #000000 12700 1;
+#X msg 414 91 \$1 3;
+#X obj 415 122 line 3;
+#X obj 415 150 int;
+#N canvas 525 200 773 714 compuerta 0;
+#X obj 42 18 inlet;
+#X obj 41 187 change 4;
+#X obj 291 180 change 2;
+#X obj 41 270 timer;
+#X floatatom 42 310 8 0 0 0 - - -, f 8;
+#X obj 46 380 change 1;
+#X obj 48 458 bng 16 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 90 75 vsl 16 52 20 600 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 44 215 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 291 209 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 44 234 debounce 200;
+#X obj 290 230 debounce 200;
+#X obj 49 490 bang;
+#X obj 119 514 delay 1500;
+#X obj 51 579 outlet;
+#X obj 119 582 outlet;
+#X text 90 51 test slider;
+#X text 103 308 velocidad entre umbrales;
+#X obj 46 405 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 140 170 bang;
+#X obj 45 422 debounce 3000;
+#X floatatom 27 68 5 0 0 0 - - -, f 5;
+#X text 235 382 valores arriba de 100 ms no sirven el movimiento normal
+lo toma como rapido;
+#X text 235 432 vlores de 80 ms abajo \, mejora el sistema \, el movimiento
+deve ser bastante rapido \,;
+#X obj 288 141 expr if( $i1 < (esv+50) \, 2 \, 0);
+#X obj 296 506 clip 20 1000;
+#X obj 298 584 outlet;
+#X text 284 80 la variable esv \, viene de ajuste interfaz umbral esfuerzo
+M rapido \, esto para ajustar el inicio de deteccion de velocidad con
+timer de los valores entrantes;
+#X obj 44 346 expr if( $f1 < tim1 \, 1 \, 0);
+#X obj 41 143 expr if( $i1 > (esv1) \, 4 \, 0);
+#X text 231 346 tim1 = variable de control de velocidad de gesto;
+#X connect 0 0 21 0;
+#X connect 0 0 24 0;
+#X connect 0 0 29 0;
+#X connect 1 0 8 0;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 25 0;
+#X connect 4 0 28 0;
+#X connect 5 0 18 0;
+#X connect 6 0 12 0;
+#X connect 7 0 24 0;
+#X connect 7 0 29 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 1;
+#X connect 12 0 13 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 18 0 20 0;
+#X connect 19 0 3 0;
+#X connect 20 0 6 0;
+#X connect 24 0 2 0;
+#X connect 25 0 26 0;
+#X connect 28 0 5 0;
+#X connect 29 0 1 0;
+#X restore 459 215 pd compuerta gestos;
+#X obj 20 176 loadbang;
+#X obj 419 278 spigot;
+#X obj 458 253 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 681 345 SOLO FUNICONA GESTO RAPIDO CON UMBRAL NUMERO 1;
+#X obj 381 -144 inlet;
+#X text 431 -143 osc canal 1 elecamarillo;
+#X obj 30 -100 cnv 15 283 33 empty empty empty 20 12 0 14 #000000 #404040
+0;
+#X obj 31 -82 cnv 15 283 237 empty empty empty 20 12 0 14 #e8ecf8 #404040
+0;
+#X obj 74 -81 vsl 12 119 0 1200 0 0 empty cha3 ELECTRODO\ Amarillo\ CH2
+-12 -14 1 11 #000000 #ffea00 #e0fd08 0 1;
+#X obj 160 -60 hsl 84 10 0 50 0 0 sens2 sense1 Sensibilidad\ esfuerzo
+-2 -8 1 10 #fcfcfc #000000 #000000 4150 1;
+#X obj 260 -60 nbx 3 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#fcfcfc #000000 #000000 25 256 0;
+#X obj 92 29 nbx 4 15 -1e+37 1e+37 0 0 empty minvr1 Min -37 7 1 10
+#040c04 #fbff00 #000000 0 256 0;
+#X obj 90 -80 nbx 4 16 -1e+37 1e+37 0 0 empty maxvr1 Max -37 5 1 10
+#040404 #ffff00 #000000 0 256 0;
+#X obj 170 552 outlet;
+#X obj 175 46 bng 14 250 50 0 empty b1a WIMUMO\ ElECTRODO\ AMARILLO
+-120 -159 2 15 #fcfcfc #00f800 #000000;
+#X obj 175 69 bng 18 250 50 0 empty b2a MOV.\ RAPIDOS -21 -35 1 10
+#fcfcfc #fc9000 #000000;
+#X obj 174 94 bng 24 250 50 0 empty b3a empty 17 7 0 10 #fcfcfc #942090
+#000000;
+#X obj 174 124 bng 29 250 50 0 empty b4a \ AJUSTE\ MIDI\  58 -90 2
+11 #fcfcfc #000000 #000000;
+#X obj 40 50 tgl 19 0 empty empty Detec.\ G.\\\\\ Rapido 21 6 1 10
+#fcfcfc #000000 #000000 0 1;
+#X obj 426 553 outlet;
+#X obj 488 552 outlet;
+#X obj 558 552 outlet;
+#X obj 627 554 outlet;
+#X obj 643 -143 inlet;
+#X obj 38 90 nbx 3 14 -1e+37 1e+37 0 0 vgr1 empty Velocidad\ Mov\ Rápido
+0 -8 1 9 #fcfcfc #000000 #000000 120 256 0;
+#X obj 172 453 maxlib/scale 100 1000 0 127;
+#X floatatom 216 427 5 0 0 0 - - -, f 5;
+#X floatatom 256 428 5 0 0 0 - - -, f 5;
+#X obj 262 56 nbx 3 12 -1e+37 1e+37 0 0 empty cvm MIN 4 -8 1 9 #fcfcfc
+#000000 #000000 0 256 0;
+#X text 11 452 scalar valores midi;
+#X text 0 400 recibe velores interfaz;
+#X text 87 239 valores variable de tiempo gesto rapido;
+#X obj 38 131 nbx 5 13 -1e+37 1e+37 0 0 empty rtg1 Retardo\ Trigger\ Mov\ rápido
+0 -8 1 10 #fcfcfc #000000 #000000 3000 256 0;
+#X obj 39 105 bng 8 250 50 0 empty empty 30ms\ \ a\ 200ms 40 -10 2
+9 #fcfcfc #000000 #000000;
+#X obj 170 518 int;
+#X obj 170 485 clip 0 127;
+#X floatatom 622 309 5 0 0 0 - - -, f 5;
+#X text 470 70 envia dato raw para sel segun el esfuerso;
+#X text 515 186 recive señal filtraa con menos velocidad;
+#X obj 140 -39 nbx 3 15 50 500 0 0 gvrtimer1 umbralauto1 Umbral\ \ Mov.\ Rapido
+42 5 1 9 #148ca3 #000000 #000000 50 256 0;
+#X obj 643 -113 loadbang;
+#X obj 39 145 bng 8 250 50 0 empty empty 1000\ 3000\\\\\ ms 49 -9 1
+9 #fcfcfc #000000 #000000;
+#X obj 32 -20 nbx 3 15 -1e+37 1e+37 0 0 empty midir1 MIDI 2 -10 1 10
+#fcfcfc #000000 #000000 0 256 0;
+#X obj 111 4 tgl 15 0 empty empty Ajuste\ Aut.\ Piso\ de\ ruido 32
+6 1 10 #fcfcfc #f41008 #000000 0 1;
+#X obj 128 5 bng 8 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X text 840 -100 recibe valor de variable param$f2 de rango superior
+de deteccio para abrir compuerta de rango \, defecto es 250;
+#N canvas 734 171 402 438 electror 0;
+#X obj 46 252 int;
+#X obj 48 130 mavg 9.1;
+#X msg 48 169 \$1 3;
+#X obj 47 219 line 3;
+#X obj 70 320 minmax;
+#X obj 70 290 pack f;
+#X msg 99 167 1;
+#X text 230 350 valores para slider;
+#X obj 50 31 inlet;
+#X obj 102 33 inlet;
+#X obj 47 400 outlet;
+#X text 109 378 envio valores minimo y maximo Sliders;
+#X obj 70 350 s minvr1;
+#X obj 150 350 s maxvr1;
+#X connect 0 0 5 0;
+#X connect 0 0 10 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 12 0;
+#X connect 4 1 13 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 2;
+#X connect 8 0 1 0;
+#X connect 9 0 1 1;
+#X restore 380 -26 pd electror;
+#X msg 18 321 25;
+#X text 50 320 ajustar mavg en 25 al iniciar;
+#X text 844 -61 boto= Umbral de esfuerzo M rapido;
+#X text 86 261 boton= Velocidad Mov \, Rapido;
+#X text 680 240 boton = Retardo Trigger M Rapido;
+#X floatatom 231 525 5 0 0 0 - - -, f 5;
+#X obj 769 -25 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 771 39 5 0 0 0 - - -, f 5;
+#X msg 806 -87 200;
+#X obj 787 -59 t b f;
+#X obj 18 258 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 39 236 t b f;
+#X msg 39 206 80;
+#X floatatom 366 316 5 0 0 0 - - -, f 5;
+#X msg 640 240 3000;
+#X obj 896 29 float;
+#X floatatom 928 5 5 0 0 0 - - -, f 5;
+#X floatatom 896 64 5 0 0 0 - - -, f 5;
+#X obj 895 -5 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X text 950 30 ajuste automatico de valor de umbrla par deteccion de
+velocidad de movimiento. dependiendo de la entrada de ruino ( valor
+min del sistema) envio de abstraccion ps electror;
+#X obj 230 137 nbx 5 18 -1e+37 1e+37 0 0 empty velo1 Velocidad\ Mov\ ms
+-3 -12 1 10 #14888a #000000 #000000 0 256 0;
+#X obj 42 -152 import zexy;
+#X obj 130 -150 import mapping;
+#X obj 240 -150 import mrpeach;
+#X text 473 -83 ---> valor raw MMG;
+#X text 1032 242 1.bottom;
+#X text 1032 263 2.top;
+#X text 1120 180 output-range;
+#X msg 983 291 range \$1 \$2;
+#N canvas 366 206 174 256 flash-time 0;
+#X obj 68 180 pack;
+#X obj 103 149 t b a;
+#X obj 68 205 outlet;
+#X obj 103 104 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-bottom empty
+0 -8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 104 124 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-top empty 0
+-8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 40 70 inlet;
+#X obj 120 70 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 48 42 2 100 100;
+#X restore 983 241 pd flash-time;
+#X obj 1060 180 + 100;
+#X obj 980 210 spigot;
+#X obj 1060 210 spigot;
+#X obj 220 44 flatgui/knob 32 32 0 127 0 0 cvmin1 empty MIN 0 -8 0
+8 #fcfcfc #000000 #000000 0 1;
+;
+#X obj 219 86 flatgui/knob 32 32 0 127 0 0 cvmax1 empty MAX 0 -8 0
+8 #fcfcfc #000000 #000000 0 1;
+;
+#X obj 261 98 nbx 3 12 -1e+37 1e+37 0 0 empty cvm MAX 4 -8 1 9 #fcfcfc
+#000000 #000000 0 256 0;
+#X obj 380 -110 mrpeach/routeOSC /wimumo026/env/ch2;
+#X obj 403 -83 s mmgval2;
+#X obj 380 10 s cha3;
+#X obj 425 -60 r sens2;
+#X obj 413 40 r mmgval2;
+#X obj 490 40 r sengr1;
+#X obj 460 185 r cha3;
+#X obj 521 255 s velo1;
+#X obj 587 243 r rtg1;
+#X obj 736 280 s rtg1;
+#X obj 432 382 s b1a;
+#X obj 498 384 s b2a;
+#X obj 562 382 s b3a;
+#X obj 631 383 s b4a;
+#X obj 75 204 r vgr1;
+#X obj 18 283 v tim1;
+#X obj 18 354 s sense1;
+#X obj 170 400 r cha3;
+#X text 214 377 electrodo amarillo;
+#X obj 219 401 r cvmin1;
+#X obj 287 400 r cvmax1;
+#X obj 226 551 s midir1;
+#X obj 983 320 s cha3;
+#X obj 789 -122 r gvrtimer1;
+#X obj 897 96 s umbralauto1;
+#X obj 928 -25 r minvr1;
+#X obj 980 150 r minvr1;
+#X obj 1060 150 r maxvr1;
+#X obj 770 10 v esv1;
+#X obj 120 -50 vsl 9 32 20 300 0 0 empty empty empty 0 -9 0 10 #000000
+#3e510b #000000 332 1;
+#X msg 640 -40 set 120;
+#X obj 260 0 nbx 2 18 -1e+37 1e+37 0 0 empty umbralauto1 empty 0 -8
+0 10 #086172 #000000 #000000 0 256 3;
+#X msg 650 -70 50;
+#X connect 0 0 58 0;
+#X connect 1 0 31 0;
+#X connect 1 0 105 0;
+#X connect 2 0 32 0;
+#X connect 2 0 106 0;
+#X connect 3 0 33 0;
+#X connect 3 0 107 0;
+#X connect 4 0 8 0;
+#X connect 5 0 34 0;
+#X connect 5 0 108 0;
+#X connect 6 0 1 0;
+#X connect 6 1 2 0;
+#X connect 6 2 3 0;
+#X connect 6 3 5 0;
+#X connect 7 0 48 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 11 0 14 0;
+#X connect 11 1 14 0;
+#X connect 11 2 102 0;
+#X connect 11 2 13 0;
+#X connect 12 0 71 0;
+#X connect 12 0 59 0;
+#X connect 13 0 6 0;
+#X connect 13 0 6 1;
+#X connect 13 0 72 0;
+#X connect 14 0 13 1;
+#X connect 14 0 30 0;
+#X connect 16 0 95 0;
+#X connect 21 0 22 0;
+#X connect 36 0 45 0;
+#X connect 37 0 47 0;
+#X connect 38 0 37 1;
+#X connect 39 0 37 2;
+#X connect 44 0 53 0;
+#X connect 46 0 25 0;
+#X connect 46 0 64 0;
+#X connect 46 0 116 0;
+#X connect 47 0 46 0;
+#X connect 52 0 73 0;
+#X connect 52 0 127 0;
+#X connect 52 0 67 0;
+#X connect 52 0 125 0;
+#X connect 55 0 77 0;
+#X connect 58 0 97 0;
+#X connect 59 0 111 0;
+#X connect 65 0 123 0;
+#X connect 67 0 68 0;
+#X connect 68 0 65 0;
+#X connect 68 1 123 0;
+#X connect 69 0 110 0;
+#X connect 70 0 69 0;
+#X connect 70 1 110 0;
+#X connect 71 0 36 0;
+#X connect 71 0 70 0;
+#X connect 73 0 7 0;
+#X connect 73 0 104 0;
+#X connect 74 0 76 0;
+#X connect 75 0 74 1;
+#X connect 76 0 68 0;
+#X connect 76 0 119 0;
+#X connect 77 0 74 0;
+#X connect 87 0 117 0;
+#X connect 88 0 87 0;
+#X connect 89 0 91 0;
+#X connect 90 0 88 0;
+#X connect 91 0 88 1;
+#X connect 92 0 40 0;
+#X connect 93 0 94 0;
+#X connect 95 0 0 0;
+#X connect 95 0 96 0;
+#X connect 98 0 58 1;
+#X connect 99 0 4 0;
+#X connect 100 0 4 1;
+#X connect 101 0 11 0;
+#X connect 109 0 70 0;
+#X connect 112 0 37 0;
+#X connect 114 0 38 0;
+#X connect 115 0 39 0;
+#X connect 118 0 68 0;
+#X connect 120 0 75 0;
+#X connect 121 0 90 0;
+#X connect 122 0 89 0;
+#X connect 123 0 66 0;
+#X connect 124 0 51 0;
+#X connect 125 0 36 0;
+#X connect 127 0 124 0;
+#X coords 0 -1 1 1 291 283 2 28 -122;

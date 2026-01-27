@@ -1,0 +1,101 @@
+#N canvas 179 222 815 265 12;
+#X msg 25 145 port \$1;
+#X obj 30 56 cnv 15 749 51 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 24 238 outlet;
+#X obj 28 2 import mrpeach;
+#X obj 24 205 mrpeach/unpackOSC;
+#X obj 78 238 s routero2;
+#X obj 55 95 cnv 5 32 10 empty empty OSC\ out -1 4 0 8 #e0e0e0 #980101
+0;
+#X obj 30 40 cnv 15 747 17 empty empty empty 20 12 0 14 #9fa24e #404040
+0;
+#X obj 110 95 cnv 5 32 10 empty empty Actividad -1 1 0 8 #e0e0e0 #980101
+0;
+#X obj 234 80 nbx 3 14 -1e+37 1e+37 0 0 empty empty \ Manual\ port
+-9 -12 1 10 #292929 #f27386 #000000 0 256 0;
+#N canvas 753 110 687 346 infowimumo 0;
+#X obj 50 -250 mrpeach/routeOSC /wimumo026/info;
+#X symbolatom 50 -70 13 0 0 0 - - -, f 13;
+#X symbolatom 90 -130 14 0 0 0 - - -, f 14;
+#X floatatom 70 -150 5 0 0 0 - - -, f 5;
+#X floatatom 106 -100 5 0 0 0 - - -, f 5;
+#X floatatom 166 -100 5 0 0 0 - - -, f 5;
+#X floatatom 260 -100 5 0 0 0 - - -, f 5;
+#X symbolatom 190 -70 21 0 0 0 - - -, f 21;
+#X symbolatom 300 -160 20 0 0 0 - - -, f 20;
+#X obj 50 -220 unpack s f s f f f s s s s;
+#X symbolatom 290 -190 21 0 0 0 - - -, f 21;
+#X obj 50 -290 inlet;
+#X obj 50 30 s ipwimu;
+#X obj 110 -30 s puerto;
+#X obj 90 0 s ipmodem;
+#X obj 190 -30 s estado;
+#X obj 170 40 s wimubatery;
+#X obj 260 -30 s wimucanales;
+#X connect 0 0 9 0;
+#X connect 1 0 12 0;
+#X connect 2 0 14 0;
+#X connect 3 0 15 0;
+#X connect 4 0 13 0;
+#X connect 5 0 16 0;
+#X connect 6 0 17 0;
+#X connect 9 0 1 0;
+#X connect 9 1 3 0;
+#X connect 9 2 2 0;
+#X connect 9 3 4 0;
+#X connect 9 4 5 0;
+#X connect 9 5 6 0;
+#X connect 9 7 7 0;
+#X connect 9 8 8 0;
+#X connect 9 9 10 0;
+#X connect 11 0 0 0;
+#X restore 165 205 pd infowimumo;
+#X obj 165 80 nbx 4 14 -1e+37 1e+37 0 0 empty puerto Act.\ Puerto -3
+-12 2 10 #000000 #00eeff #000000 0 256 0;
+#X dropdown 40 75 6 1 0 3 - - -, f 6;
+#X obj 325 120 loadbang;
+#X obj 120 65 bng 24 50 20 0 empty empty Open\ Sound\ Control\ Receiver\ in\ WIMUMO-Data\ 
+166 -19 1 12 #fcfcfc #b84a4e #000000;
+#X obj 25 175 mrpeach/udpreceive;
+#X obj 295 5 r ipmodem;
+#X symbolatom 295 75 13 0 0 0 - - -, f 13;
+#X obj 39 64 cnv 5 32 10 empty empty PUERTO -1 1 0 8 #e0e0e0 #980101
+0;
+#X obj 293 62 cnv 5 32 10 empty empty IP\ HOST -1 4 0 10 #e0e0e0 #980101
+0;
+#X symbolatom 400 75 13 0 0 0 - - -, f 13;
+#X obj 402 61 cnv 5 32 10 empty empty IP\ WIMUMO -1 4 0 10 #e0e0e0
+#980101 0;
+#X obj 400 5 r ipwimu;
+#X obj 505 75 hsl 128 15 0 100 0 0 empty empty Nivel\ de\ Bateria -2
+-8 1 10 #000000 #4ce657 #000000 0 1;
+#X obj 500 5 r wimubatery;
+#X obj 507 94 cnv 5 32 10 empty empty 0% -1 4 0 10 #e0e0e0 #980101
+0;
+#X obj 616 92 cnv 5 32 10 empty empty 100% -1 4 0 10 #e0e0e0 #980101
+0;
+#X obj 635 5 r wimucanales;
+#X obj 665 75 nbx 2 18 -1e+37 1e+37 0 0 empty empty Canales\  0 -8
+1 10 #000000 #24cbf5 #000000 0 256 1;
+#X msg 575 145 set off;
+#X obj 570 120 loadbang;
+#X msg 325 155 names OFF 8036 8038 8039 8040;
+#X connect 0 0 15 0;
+#X connect 4 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 10 0;
+#X connect 9 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 31 0;
+#X connect 15 0 4 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 22 0 20 0;
+#X connect 24 0 23 0;
+#X connect 27 0 28 0;
+#X connect 29 0 17 0;
+#X connect 29 0 20 0;
+#X connect 30 0 29 0;
+#X connect 31 0 12 0;
+#X coords 0 -1 1 1 760 80 2 24 35;
