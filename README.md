@@ -77,6 +77,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.10.2 Biofonia de Axones y Arpegios- Guias pertitura y referencias](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.2%20Biofonia%20de%20Axones%20y%20Arpegios/GUIA%20PARTIRUTA%20BIOFONIA%20DE%20AXONES%20Y%20ARPEGIOS%20EN.pdf)
 ---
 **Repositorio completo del material:** Todos los archivos se encuentran disponibles en este repositorio.
+**Complete repository of material:**  All files are available in this repository.
 
 ---
 
