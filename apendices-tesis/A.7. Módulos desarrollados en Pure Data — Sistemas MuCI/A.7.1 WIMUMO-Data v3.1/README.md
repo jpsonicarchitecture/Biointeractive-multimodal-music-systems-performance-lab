@@ -11,11 +11,9 @@ developed in Pure Data for motion-based and embodied interaction.
 - `mmgsplit.pd` – MMG signal processing and routing
 - `mmgsplit1.pd` – Alternative MMG signal split module
 - `mmgsplit2.pd` – Extended MMG signal processing
-- `__________.pd` – (reserved)
-- `__________.pd` – (reserved)
-- `__________.pd` – (reserved)
-- `__________.pd` – (reserved)
-- `__________.pd` – (reserved)
+- `oscwimu.pd` – Módulo OSC wimumo
+- `WimumoEA .pd` – Módulo Channel 1 
+- `WimumoER.pd` – Módulo Channel 2
 
 ## Resources
 - Interface reference images
@@ -28,7 +26,7 @@ are documented in the official WIMUMO project repository:
 https://github.com/wimumo/wimumo.github.io
 
 ## See reference manual for configuration and usage of WIMUMO-Data v3.1
-[Manual link to be added]
+[(https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.5.%20Manuales%20y%20documentación%20técnica%20de%20sistemas%20MuCI/A.5.1%20WIMUMO-Data%20v3.1/WIMUMOData%203.1%20-repositorio-EN.pdf)]
 
 ## Dependencies
 - Pure Data / Purr Data version 2.19 or higher
@@ -42,6 +40,11 @@ https://github.com/wimumo/wimumo.github.io
 3. Connect the computer and interface devices to the same WLAN network
 4. Configure OSC addresses and ports according to the system documentation
 5. Run the main patch
+
+## Calibrate the electrodes
+1. See manual
+2.  [(https://github.com/jpsonicarchitecture/Biointeractive-multimodal-music-systems-performance-lab/blob/main/apendices-tesis/A.5.%20Manuales%20y%20documentación%20técnica%20de%20sistemas%20MuCI/A.5.1%20WIMUMO-Data%20v3.1/WIMUMOData%203.1%20-repositorio-EN.pdf)]
+
 
 ## Adjustable Parameters
 - Sensor sensitivity thresholds
