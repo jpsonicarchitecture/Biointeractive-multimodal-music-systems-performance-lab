@@ -65,7 +65,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 
 ### A.8. Modelos 3D de Crosier-Control
 - [A.8.1 Archivos f3D para Fusion 360 del Modelo de impresión en 3D](./apendices-tesis/A.8.%20Modelos%203D%20de%20Crosier-Control/A.8.1%20Archivos%20f3D%20para%20Fusion%20360%20del%20Modelo%20de%20impresión%20en%203D)
-- A.8.2 Modelos estructurales del DMI Crosier-Control
+- [A.8.2 Modelos estructurales del DMI Crosier-Control](./apendices-tesis/A.8.%20Modelos%203D%20de%20Crosier-Control/A.8.2%20Modelos%20estructurales%20del%20DMI%20Crosier-Control)
 - A.8.3 Instrucciones de ensamblaje
 
 ### A.9. Códigos desarrollados en Processing
