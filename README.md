@@ -75,7 +75,7 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 - [A.10.1 Documentación de Folletos y propaganda](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.1%20Documentación%20de%20Folletos%20y%20propaganda/Folleto-biolevigacion.jpg)
 - [A.10.2 BIOLEVIGACION SUITE PERFORMATICA Guías de interpretación y partitura](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.2%20Guías%20de%20interpretación%20y%20partitura/PARITURA-BIOLEVIGACION-EN.pdf)
 - [A.10.2 Biofonia de Axones y Arpegios- Guias pertitura y referencias](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.2%20Biofonia%20de%20Axones%20y%20Arpegios/GUIA%20PARTIRUTA%20BIOFONIA%20DE%20AXONES%20Y%20ARPEGIOS%20EN.pdf)
-- [A.10.3 Sirenomorfía del axonio pulsado imaginario- Guias pertitura y referencias](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.3%20Sirenomorfia%20del%20axonio%20pulsado%20imaginario/GUIA%20SIRENOMORFIA%20DEL%20AXONIO%20PULSADO%20IMAGINADO%20EN.pdf)
+- [A.10.3 Sirenomorfía del Axonio Pulsado Imaginario- Guias partitura y referencias](./apendices-tesis/A.10%20Guías%20de%20partituras%20de%20las%20obras%20del%20corpus/A.10.3%20Sirenomorfia%20del%20axonio%20pulsado%20imaginario/GUIA%20SIRENOMORFIA%20DEL%20AXONIO%20PULSADO%20IMAGINADO%20EN.pdf)
 ---
 **Repositorio completo del material:** Todos los archivos se encuentran disponibles en este repositorio.
 **Complete repository of material:**  All files are available in this repository.
