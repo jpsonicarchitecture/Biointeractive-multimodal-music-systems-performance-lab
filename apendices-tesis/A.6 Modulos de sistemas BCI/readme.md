@@ -50,7 +50,7 @@ Interfaz para procesamiento de datos EEG del headset MUSE.
 Sistema de control con MUSE para aplicaciones de movimiento.
 
 ### A.6.4 Smarphone-Sensors
-Modules for smartphone Sensors
+Modules para los Sensores en los smartphone 
 
 ## Requisitos
 - Pure Data VERSION PurrData  Purr-Data-2.19.3 20230725-rev.e9fca4f8 o superir
