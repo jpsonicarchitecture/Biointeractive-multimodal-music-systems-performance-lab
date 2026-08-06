@@ -1,4 +1,4 @@
-## A.6.4 Smartphone Sensors Modules
+# A.6.4 Smartphone Sensors Modules
 
 This directory contains the necessary patches and objects to work with smartphone sensor integration.
 
@@ -9,3 +9,111 @@ Within this folder, you will find two main subdirectories:
 
 ### Usage Note
 To run these modules, you need to create a main patch and call the required objects included in this repository.
+
+---
+
+## Requirements
+
+* **Pure Data Version:** PurrData `Purr-Data-2.19.3 20230725-rev.e9fca4f8` or higher.
+* **PlugData Version:** `PlugData Version 7.0` or higher.
+* **Compatibility:** Not compatible with Pure Data Vanilla at this time.
+* **Libraries (PurrData):** All necessary libraries are included in the PurrData version.
+* **Libraries (PlugData):** For the PlugData version, all required libraries must be installed manually.
+
+### Required Libraries for PlugData
+Please make sure to download and install the following libraries for everything to function properly:
+
+* `bsaylor`
+* `ceammc`
+* `cyclone`
+* `else`
+* `Gem`
+* `ggee`
+* `iemgui`
+* `mapping`
+* `maxlib`
+* `moonlib`
+* `motex`
+* `mrpeach`
+* `puremapping`
+* `purepd`
+* `unauthorized`
+* `windowing`
+* `zexy`
+
+---
+
+## Installation
+
+1. Download the entire folder.
+2. Open the file `1_CrosierMain.pd`.
+3. Check dependencies in each specific README.
+
+---
+
+## Author
+
+**Juan Pablo Posada Alvarez**
+
+
+
+
+
+#ESPANOL
+
+# A.6.4 Módulos de Sensores para Smartphone
+
+Este directorio contiene los parches y objetos necesarios para trabajar con la integración de sensores de teléfonos inteligentes.
+
+Dentro de esta carpeta, encontrará dos subdirectorios principales:
+
+1. **Versión Purr Data**: Contiene todos los archivos y parches configurados específicamente para **Purr Data**.
+2. **Versión Plug Data**: Contiene todos los archivos y parches configurados específicamente para **PlugData**.
+
+### Nota de uso
+Para ejecutar estos módulos, es necesario crear un parche principal y llamar a los objetos requeridos incluidos en este repositorio.
+
+---
+
+## Requisitos
+
+* **Versión Pure Data:** PurrData `Purr-Data-2.19.3 20230725-rev.e9fca4f8` o superior.
+* **Versión PlugData:** `PlugData Versión 0.7.0` o superior.
+* **Compatibilidad:** No es compatible con Pure Data Vanilla en este momento.
+* **Librerías (PurrData):** Todas las librerías necesarias ya están incluidas en la versión de PurrData.
+* **Librerías (PlugData):** Para la versión de PlugData, todas las librerías requeridas deben instalarse manualmente.
+
+### Librerías requeridas para PlugData
+Asegúrese de descargar e instalar las siguientes librerías para que todo funcione correctamente:
+
+* `bsaylor`
+* `ceammc`
+* `cyclone`
+* `else`
+* `Gem`
+* `ggee`
+* `iemgui`
+* `mapping`
+* `maxlib`
+* `moonlib`
+* `motex`
+* `mrpeach`
+* `puremapping`
+* `purepd`
+* `unauthorized`
+* `windowing`
+* `zexy`
+
+---
+
+## Instalación
+
+1. Descargue la carpeta completa.
+2. Abra el archivo `1_CrosierMain.pd`.
+3. Verifique las dependencias en cada README específico.
+
+---
+
+## Autor
+
+**Juan Pablo Posada Alvarez**
