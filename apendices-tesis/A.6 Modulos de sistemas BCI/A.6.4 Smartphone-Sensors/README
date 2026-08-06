@@ -1,1 +1,11 @@
+# A.6.4 Smartphone Sensors Modules
 
+This directory contains the necessary patches and objects to work with smartphone sensor integration.
+
+Within this folder, you will find two main subdirectories:
+
+1. **Purr Data Version**: Contains all the files and patches specifically configured for **Purr Data**.
+2. **Plug Data Version**: Contains all the files and patches specifically configured for **PlugData**.
+
+### Usage Note
+To run these modules, you need to create a main patch and call the required objects included in this repository.
