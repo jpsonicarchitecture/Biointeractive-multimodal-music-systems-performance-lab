@@ -1,4 +1,4 @@
-# A.6 Modules developed in Pure Data — BCI Systems
+# A.6 Modules developed in Pure Data — BCI Systems & DMI
 
 Collection of patches and systems in Pure Data for biomedical data processing and multimodal control.
 
