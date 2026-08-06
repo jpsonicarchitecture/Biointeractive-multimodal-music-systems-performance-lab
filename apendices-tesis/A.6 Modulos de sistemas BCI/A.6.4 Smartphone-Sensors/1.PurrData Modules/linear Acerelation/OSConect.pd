@@ -1,0 +1,48 @@
+#N canvas 334 257 263 390 12;
+#X msg 60 220 port \$1;
+#X obj 61 61 vradio 12 0 0 4 empty empty OSC\ IN 48 -8 1 14 #fcfcfc
+#000000 #000000 3;
+#X text 74 93 8037;
+#N canvas 645 376 450 300 selector 0;
+#X obj 40 50 sel 1 2 3;
+#X msg 40 90 8034;
+#X msg 100 90 8035;
+#X msg 170 90 8036;
+#X msg 220 90 8037;
+#X obj 40 20 inlet;
+#X obj 40 140 outlet;
+#X obj 100 140 outlet;
+#X obj 170 140 outlet;
+#X obj 220 140 outlet;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 0 3 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 0;
+#X connect 5 0 0 0;
+#X restore 60 180 pd selector;
+#X text 75 66 8034;
+#X text 77 55 off;
+#X obj 60 330 outlet;
+#X obj 131 81 nbx 5 14 -1e+37 1e+37 0 0 empty empty select 0 -8 0 10
+#fcfcfc #000000 #000000 0 256 0;
+#X obj 49 15 import mrpeach;
+#X obj 60 290 mrpeach/unpackOSC;
+#X text 75 79 Moto G2;
+#X obj 176 53 bng 22 50 20 0 empty empty Puerto -115 -2 0 9 #fcfcfc
+#b84a4e #000000;
+#X obj 60 250 mrpeach/udpreceive;
+#X connect 0 0 12 0;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 1 0 0;
+#X connect 3 2 0 0;
+#X connect 3 3 0 0;
+#X connect 7 0 0 0;
+#X connect 9 0 6 0;
+#X connect 12 0 9 0;
+#X connect 12 0 11 0;
+#X coords 0 -1 1 1 161 82 2 48 40;

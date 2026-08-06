@@ -1,0 +1,68 @@
+#N canvas 301 77 478 529 10;
+#X obj 10 -130 import mrpeach;
+#X obj 291 275 bng 15 250 50 0 empty empty empty 8 -8 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 291 252 4 0 0 0 - - -, f 4;
+#X obj 340 271 print;
+#X obj 391 255 bng 15 250 50 0 empty empty empty 8 -8 0 10 #fcfcfc
+#000000 #000000;
+#X text 390 270 finished;
+#X obj 291 226 for++ 0 180 1000;
+#X obj 296 -98 inlet;
+#X obj 100 300 outlet;
+#X obj 100 210 spigot;
+#X obj 107 -60 cnv 15 155 18 empty empty MÓDULO\ Sensor\ proximidad
+9 6 2 11 #384026 #d9d3d3 0;
+#X obj 106 -41 cnv 15 157 81 empty empty empty 20 12 0 14 #eae6e6 #404040
+0;
+#X obj 160 -30 hsl 88 16 0 5 0 0 empty empty distancia 27 5 2 10 #000000
+#fc0400 #fff5f5 0 1;
+#X obj 110 -30 nbx 3 15 -1e+37 1e+37 0 0 empty empty Dist. 0 -8 2 10
+#fc8000 #000000 #000000 0 256 0;
+#X obj 160 0 tgl 15 0 empty empty MIDI\ on/off 24 5 2 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 210 20 nbx 3 13 -1e+37 1e+37 0 0 empty empty midi\ data -34
+6 2 8 #fcfcfc #000000 #000000 0 256 0;
+#X text 90 330 SALIDA MIDI;
+#X floatatom 296 -10 5 0 0 0 - - -, f 5;
+#X text 10 -150 MODULO recepcion sensor proximidad SMARTPHONE;
+#X obj 296 -70 mrpeach/routeOSC /proximity;
+#X obj 310 20 s prox;
+#X obj 296 60 expr if( $f1 == 5 \, 2 \, 0);
+#X obj 296 90 change 2;
+#X obj 296 120 debounce 2000;
+#X obj 296 150 bng 28 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 296 190 s proxb;
+#X obj 100 130 sel 2;
+#X msg 100 157 1;
+#X msg 100 180 127;
+#X floatatom 120 270 5 0 0 0 - - -, f 5;
+#X obj 113 -8 bng 28 250 50 0 empty proxb TRIG. 5 36 0 10 #fcfcfc #000000
+#a20202;
+#X obj 114 -92 r prox;
+#X obj 296 -40 unpack f;
+#X connect 2 0 1 0;
+#X connect 6 0 2 0;
+#X connect 6 1 4 0;
+#X connect 7 0 19 0;
+#X connect 9 0 15 0;
+#X connect 9 0 8 0;
+#X connect 9 0 29 0;
+#X connect 14 0 9 1;
+#X connect 17 0 20 0;
+#X connect 17 0 21 0;
+#X connect 19 0 32 0;
+#X connect 21 0 22 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 0 28 0;
+#X connect 26 0 27 0;
+#X connect 27 0 9 0;
+#X connect 28 0 9 0;
+#X connect 31 0 13 0;
+#X connect 31 0 12 0;
+#X connect 32 0 17 0;
+#X coords 0 -1 1 1 163 106 2 103 -62;

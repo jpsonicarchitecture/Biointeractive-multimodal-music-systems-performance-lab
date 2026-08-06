@@ -1,0 +1,48 @@
+#N canvas 571 544 919 278 12;
+#X obj 148 240 sendOSC;
+#X msg 350 160 disconnect;
+#X obj 150 280 print;
+#X obj 60 0 import mrpeach;
+#X obj 150 70 inlet;
+#X text 60 30 envio datos OSC;
+#X obj 360 80 inlet;
+#X floatatom 516 237 5 0 0 0 - - -, f 5;
+#X floatatom 440 80 8 0 0 0 - - -, f 8;
+#X floatatom 560 80 10 0 0 0 - - -, f 10;
+#X floatatom 690 80 9 0 0 0 - - -, f 9;
+#X obj 440 50 / 1;
+#X obj 570 50 / 1;
+#X obj 680 50 / 1;
+#X obj 440 20 r x;
+#X obj 560 20 r y;
+#X obj 680 20 r z;
+#X msg 147 117 connect localhost 8000;
+#X msg 430 160 send /orientationX \$1;
+#X msg 560 190 send /orientationY \$1;
+#X msg 680 160 send /orientationZ \$1;
+#X obj 420 120 hsl 128 15 -3.14 3.14 0 0 empty empty empty -2 -8 0
+10 #fcfcfc #000000 #000000 7185 1;
+#X obj 590 120 hsl 128 15 -3.14 3.14 0 0 empty empty empty -2 -8 0
+10 #fcfcfc #000000 #000000 3697 1;
+#X obj 751 122 hsl 128 15 -3.14 3.14 0 0 empty empty empty -2 -8 0
+10 #fcfcfc #000000 #000000 5734 1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 4 0 17 0;
+#X connect 6 0 1 0;
+#X connect 8 0 21 0;
+#X connect 10 0 23 0;
+#X connect 11 0 8 0;
+#X connect 12 0 9 0;
+#X connect 13 0 10 0;
+#X connect 14 0 11 0;
+#X connect 15 0 7 0;
+#X connect 15 0 12 0;
+#X connect 16 0 13 0;
+#X connect 17 0 0 0;
+#X connect 18 0 0 0;
+#X connect 19 0 0 0;
+#X connect 20 0 0 0;
+#X connect 21 0 18 0;
+#X connect 22 0 19 0;
+#X connect 23 0 20 0;

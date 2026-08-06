@@ -1,0 +1,4 @@
+#N canvas 135 23 600 455 12;
+#X obj 50 30 OSConect;
+#X obj 50 130 moduloEX2;
+#X connect 0 0 1 0;

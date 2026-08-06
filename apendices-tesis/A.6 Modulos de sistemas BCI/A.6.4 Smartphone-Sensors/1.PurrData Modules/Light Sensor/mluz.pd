@@ -1,0 +1,146 @@
+#N canvas 442 23 902 508 10;
+#X obj 102 -154 import mrpeach;
+#X obj 404 352 bng 15 250 50 0 empty empty empty 8 -8 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 404 329 4 0 0 0 - - -, f 4;
+#X obj 453 348 print;
+#X obj 404 282 bng 15 250 50 0 empty empty empty 8 -8 0 10 #fcfcfc
+#000000 #000000;
+#X obj 504 332 bng 15 250 50 0 empty empty empty 8 -8 0 10 #fcfcfc
+#000000 #000000;
+#X text 503 347 finished;
+#X obj 539 237 s tcode;
+#X msg 404 245 stop;
+#X obj 400 170 r np;
+#X obj 403 212 r reset;
+#X text 400 190 np = envio numero de pista;
+#X obj 404 303 for++ 0 180 1000;
+#X obj 476 281 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 469 216 select 1;
+#X msg 467 239 1;
+#X msg 540 216 0;
+#X obj 390 -140 inlet;
+#X obj 395 -46 unpack f f;
+#X obj 30 311 outlet;
+#X obj 394 71 mavg;
+#X obj 395 110 s valuz;
+#X obj 114 -92 r valuz;
+#X obj 107 -60 cnv 15 193 17 empty empty Sensor\ de\ Luz\ ambiental
+34 6 1 12 #353b64 #fffafa 0;
+#X obj 110 -40 cnv 15 192 101 empty empty empty 20 12 0 14 #eae6e6
+#404040 0;
+#X obj 120 17 hsl 53 11 2 20 0 0 senciluz empty Sencibilidad\  4 -11
+2 10 #000000 #fc0400 #000000 0 1;
+#X obj 120 -23 nbx 2 21 -1e+37 1e+37 0 0 empty empty lums 43 8 2 13
+#1ca3c4 #000000 #000000 25.5722 256 1;
+#X obj 210 -18 Flatgui/knob 32 32 0 127 0 0 sencibilidad empty Calibrador\ lumenes
+-19 44 0 8 #fcfcfc #000000 #000000 500 1;
+;
+#X obj 120 32 nbx 2 11 -1e+37 1e+37 0 0 empty empty INTENSIDAD\ LUZ
+-8 -65 2 10 #fcfcfc #000000 #000000 0 256 0;
+#X obj 186 35 nbx 3 14 -1e+37 1e+37 0 0 empty midiluz midi\ data 4
+17 2 8 #fcfcfc #000000 #000000 127 256 0;
+#X text 30 330 SALIDA MIDI;
+#X floatatom 430 50 5 0 0 0 - - -, f 5;
+#X obj 285 -40 vsl 14 87 0 32.4579 0 0 empty rv empty 0 -9 0 10 #000000
+#0fccb6 #000000 6776 1;
+#X text 102 -124 MODULO PARAMETROS POR SENSOR DE LUZ TELEFONO 1;
+#X obj 394 -72 mrpeach/routeOSC /light;
+#X text 639 -9 1.bottom;
+#X text 639 12 2.top;
+#X msg 590 40 range \$1 \$2;
+#N canvas 366 206 174 247 flash-time 0;
+#X obj 68 180 pack;
+#X obj 103 149 t b a;
+#X obj 68 205 outlet;
+#X obj 103 104 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-bottom empty
+0 -8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 103 124 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-top empty 0
+-8 0 12 #fcfcfc #000000 #000000 32.4579 256 0;
+#X obj 70 40 inlet;
+#X obj 120 60 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 48 42 2 100 100;
+#X restore 590 -10 pd flash-time;
+#X obj 590 69 s rv;
+#X obj 30 121 r valuz;
+#X obj 630 -41 value vmax;
+#X obj 90 310 s midiluz;
+#X obj 395 16 line 30;
+#X msg 395 -14 \$1 200;
+#X obj 471 19 r senciluz;
+#X obj 210 70 value maxluz;
+#X obj 80 121 value maxluz;
+#X floatatom 80 151 5 0 0 0 - - -, f 5;
+#X obj 249 -6 bng 21 250 50 0 ajusluz empty empty 17 7 0 10 #a80000
+#000000 #000000;
+#X obj 80 90 r ajusluz;
+#X msg 44 151 0;
+#X msg 120 150 0;
+#X msg 150 150 127;
+#X obj 30 181 maxlib/scale;
+#X obj 246 -21 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#000000 #ffffff #000000 20.4839 256 3;
+#X obj 30 210 clip 0 127;
+#X obj 30 270 line 30;
+#X msg 30 240 \$1 50;
+#X obj 30 290 int;
+#X obj 580 -71 r ajusluz;
+#X msg 582 -39 0;
+#X text 250 -40 max--;
+#X text 249 38 min--;
+#X connect 2 0 1 0;
+#X connect 2 0 7 0;
+#X connect 4 0 12 0;
+#X connect 8 0 12 0;
+#X connect 10 0 8 0;
+#X connect 10 0 16 0;
+#X connect 12 0 2 0;
+#X connect 12 1 5 0;
+#X connect 14 0 15 0;
+#X connect 15 0 4 0;
+#X connect 16 0 7 0;
+#X connect 17 0 34 0;
+#X connect 18 0 44 0;
+#X connect 20 0 21 0;
+#X connect 22 0 26 0;
+#X connect 25 0 28 0;
+#X connect 26 0 32 0;
+#X connect 27 0 46 0;
+#X connect 27 0 55 0;
+#X connect 31 0 20 1;
+#X connect 34 0 18 0;
+#X connect 37 0 39 0;
+#X connect 38 0 37 0;
+#X connect 40 0 54 0;
+#X connect 41 0 38 1;
+#X connect 41 0 32 0;
+#X connect 43 0 20 0;
+#X connect 44 0 43 0;
+#X connect 45 0 31 0;
+#X connect 47 0 48 0;
+#X connect 48 0 54 2;
+#X connect 50 0 47 0;
+#X connect 50 0 51 0;
+#X connect 50 0 52 0;
+#X connect 50 0 53 0;
+#X connect 51 0 54 1;
+#X connect 52 0 54 3;
+#X connect 53 0 54 4;
+#X connect 54 0 56 0;
+#X connect 56 0 58 0;
+#X connect 57 0 59 0;
+#X connect 58 0 57 0;
+#X connect 59 0 42 0;
+#X connect 59 0 19 0;
+#X connect 60 0 41 0;
+#X connect 60 0 61 0;
+#X connect 61 0 38 0;
+#X coords 0 -1 1 1 205 122 2 103 -62;

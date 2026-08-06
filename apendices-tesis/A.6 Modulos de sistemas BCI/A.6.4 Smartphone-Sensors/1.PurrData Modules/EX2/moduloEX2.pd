@@ -1,0 +1,129 @@
+#N canvas 121 43 783 704 12;
+#X obj 90 40 import mrpeach;
+#X obj 50 0 inlet;
+#X floatatom 46 389 5 0 0 0 - - -, f 5;
+#X floatatom 90 410 5 0 0 0 - - -, f 5;
+#X floatatom 300 500 5 0 0 0 - - -, f 5;
+#X obj 150 132 cnv 15 220 16 empty empty MODULO\ EX2 66 5 2 12 #62a0d0
+#000000 0;
+#X obj 300 330 mrpeach/routeOSC /audio/frequency;
+#X obj 300 370 unpack f;
+#X obj 46 329 mrpeach/routeOSC /audio/spl;
+#X obj 300 420 mavg;
+#X floatatom 380 400 5 0 0 0 - - -, f 5;
+#X obj 45 430 mavg;
+#X obj 46 359 unpack f, f 17;
+#X obj 45 460 * 100;
+#X obj 45 490 int;
+#X obj 300 460 int;
+#X obj 150 150 cnv 15 217 140 empty empty empty 20 12 0 14 #eeeeee
+#404040 0;
+#X obj 160 170 hsl 60 8 0 50 0 0 senspl empty Sencibilidad\ SPL -2
+-8 1 10 #000000 #00d6e6 #000000 0 1;
+#X obj 160 180 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 270 170 hsl 60 8 0 40 0 0 sensfrc empty Sencibilidad\ FRC -2
+-8 1 10 #000000 #00d6e6 #000000 0 1;
+#X obj 270 180 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 140 390 r senspl;
+#X obj 161 198 vsl 10 84 0 127 0 0 empty presionmidi SPL\ ref 18 34
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 420 380 r sensfrc;
+#X msg 200 390 17;
+#X msg 500 380 30;
+#X obj 180 253 nbx 3 14 -1e+37 1e+37 0 0 empty presionmidi MIDI\ spl
+0 -8 0 10 #000000 #ff0505 #000000 0 256 0;
+#X obj 240 193 hsl 113 16 30 4000 1 0 empty empty Frecuencia 72 -9
+2 10 #000000 #00ff11 #000000 0 1;
+#X text 241 203 |;
+#X text 276 203 |;
+#X text 316 203 |;
+#X text 347 203 |;
+#X text 335 218 4Khz;
+#X text 231 216 30Hz;
+#X obj 240 70 r frechook;
+#X obj 273 237 nbx 5 14 -1e+37 1e+37 0 0 empty frechook MIDI\ frec
+0 -8 0 10 #000000 #2cd416 #000000 0 256 1;
+#X obj 340 500 s frechook;
+#X floatatom 46 523 5 0 0 0 - - -, f 5;
+#X obj 40 560 value presion;
+#X obj 570 360 value presion;
+#X obj 600 390 + 50;
+#X obj 720 330 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 640 420 0;
+#X msg 680 420 127;
+#X obj 550 460 maxlib/scale 30 100 0 127;
+#X obj 550 390 - 10;
+#X floatatom 550 420 5 0 0 0 - - -, f 5;
+#X floatatom 600 420 5 0 0 0 - - -, f 5;
+#X obj 553 496 int;
+#X floatatom 553 525 5 0 0 0 - - -, f 5;
+#X obj 550 560 s presionmidi;
+#X text 175 269 0;
+#X text 173 195 -120;
+#X obj 190 270 bng 20 250 50 0 empty empty aut.ajus. 25 7 2 10 #fcfcfc
+#000000 #000000;
+#X obj 470 140 value ub1;
+#X obj 470 110 r uspl1;
+#X floatatom 546 138 5 0 0 0 - - -, f 5;
+#X obj 174 544 s presiont;
+#X obj 390 150 r presiont;
+#X obj 390 190 expr if($f1 < ub1 \, 1 \, 0);
+#X obj 290 610 outlet;
+#X obj 290 540 ftom;
+#X obj 550 600 outlet;
+#X obj 700 600 outlet;
+#X obj 272 255 cnv 15 88 34 empty empty empty 20 12 0 14 #878787 #404040
+0;
+#X obj 319 271 nbx 4 12 -1e+37 1e+37 0 0 uspl1 empty umbral1 -41 -8
+1 10 #fcfcfc #000000 #000000 0 256 0;
+#X text 490 270 comment;
+#X connect 1 0 6 0;
+#X connect 1 0 8 0;
+#X connect 2 0 11 0;
+#X connect 3 0 11 1;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 12 0;
+#X connect 9 0 15 0;
+#X connect 10 0 9 1;
+#X connect 11 0 13 0;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;
+#X connect 14 0 37 0;
+#X connect 15 0 4 0;
+#X connect 15 0 36 0;
+#X connect 15 0 61 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 0;
+#X connect 21 0 3 0;
+#X connect 23 0 10 0;
+#X connect 24 0 11 1;
+#X connect 25 0 9 1;
+#X connect 34 0 27 0;
+#X connect 37 0 38 0;
+#X connect 37 0 44 0;
+#X connect 37 0 57 0;
+#X connect 39 0 40 0;
+#X connect 39 0 45 0;
+#X connect 40 0 47 0;
+#X connect 41 0 39 0;
+#X connect 41 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 44 3;
+#X connect 43 0 44 4;
+#X connect 44 0 48 0;
+#X connect 45 0 46 0;
+#X connect 46 0 44 1;
+#X connect 47 0 44 2;
+#X connect 48 0 49 0;
+#X connect 48 0 62 0;
+#X connect 49 0 50 0;
+#X connect 55 0 54 0;
+#X connect 55 0 56 0;
+#X connect 58 0 59 0;
+#X connect 59 0 63 0;
+#X connect 61 0 60 0;
+#X coords 0 -1 1 1 226 165 2 145 129;
