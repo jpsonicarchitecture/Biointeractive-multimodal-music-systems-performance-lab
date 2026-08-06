@@ -13,7 +13,7 @@ Interface for EEG data processing from the MUSE headset.
 ### A.6.3 MUSE-DataIMmov v4.0
 Control system with MUSE for motion applications.
 
-### A.6.4 Smarphone-ensors
+### A.6.4 Smarphone-Sensors
 Modules for smartphone Sensors
 
 
