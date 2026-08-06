@@ -54,6 +54,7 @@ Modules para los Sensores en los smartphone
 
 ## Requisitos
 - Pure Data VERSION PurrData  Purr-Data-2.19.3 20230725-rev.e9fca4f8 o superir
+- PlugData version 7 o superior
 - no es complatible con Vanilla hasa el momento.
 - Librerías incluidas en la version PurrData, 
 
