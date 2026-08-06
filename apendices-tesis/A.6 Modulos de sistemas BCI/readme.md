@@ -13,6 +13,10 @@ Interface for EEG data processing from the MUSE headset.
 ### A.6.3 MUSE-DataIMmov v4.0
 Control system with MUSE for motion applications.
 
+### A.6.4 Smarphone-ensors
+Modules for smartphone Sensors
+
+
 ## Requirements
 - Pure Data VERSION PurrData  Purr-Data-2.19.3 20230725-rev.e9fca4f8 or higher
 - Not compatible with Vanilla at this time.
