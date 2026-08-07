@@ -66,6 +66,8 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
    - [A.6.3.1 Muse -DAta Engine 5.3 + Python OSC](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.3%20Muse-Data%20ENGINE/A.6.3.1%20Muse%20-DAta%20Engine%205.3%20+%20Python%20OSC)
    - [A.6.3.2 Muse-Data ENGINE 6.0](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.3%20Muse-Data%20ENGINE/A.6.3.2%20Muse-Data%20ENGINE%206.0)
 - [A.6.4 Smartphone Sensors](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.4%20Smartphone-Sensors)
+   - [A.6.4.1 PD Purr Data](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.4%20Smartphone-Sensors/1.PurrData%20Modules)
+   - [A.6.4.2 PD Plug Data](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.4%20Smartphone-Sensors/2.PlugData%20Modules)
 
 ### A.7. Módulos desarrollados en Pure Data — Sistemas MuCI
 - [A.7.1 WIMUMO-Data v3.1](./apendices-tesis/A.7.%20Módulos%20desarrollados%20en%20Pure%20Data%20—%20Sistemas%20MuCI/A.7.1%20WIMUMO-Data%20v3.1)
