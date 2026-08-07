@@ -27,6 +27,7 @@ Modules for smartphone Sensors
 1. Download the entire folder.
 2. Open the file 1_CrosierMain.pd. 
 3. Check dependencies in each specific README.
+4. Check installed libraries (PlugData)
 
 ## Author
 Juan Pablo Posada Alvarez
@@ -62,6 +63,7 @@ Modules para los Sensores en los smartphone
 1. Descargar la carpeta completa
 2. Abrir el archivo 1_CrosierMain.pd 
 3. Verificar dependencias en cada README específico
+4. Vrificar librerias instaladas (PlugData)
 
 ## Autor
 Juan Pablo Posada Alvarez
