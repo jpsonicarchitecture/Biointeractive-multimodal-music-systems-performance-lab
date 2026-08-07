@@ -1,1 +1,20 @@
+# 1.Purr Data Modules
+
+To use the respective modules, you must open a new patch in plugData and call each of the objects from the following list:
+The pethes receive data from the App Sensor2OSC  https://sensors2.org/osc/
+---
+
+## Available Modules List
+
+* `acelamart.pd`
+* `girosmart.pd`
+* `mluz.pd`
+* `extsensor.pd`
+* `moduloEX2.pd`
+* `acelinesmart.pd`
+* `magnet.pd`
+* `mprox.pd`
+* `smartouch.pd`
+* `vectrot.pd`
+* `oscmodule.pd`
 
