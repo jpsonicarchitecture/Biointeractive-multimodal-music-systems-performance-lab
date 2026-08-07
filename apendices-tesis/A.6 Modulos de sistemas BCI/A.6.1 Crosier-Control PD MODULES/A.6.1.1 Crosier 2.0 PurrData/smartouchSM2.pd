@@ -1,0 +1,320 @@
+#N canvas 185 23 1249 796 12;
+#X obj 135 25 import mrpeach;
+#X obj 45 25 inlet;
+#X floatatom 150 295 5 0 0 0 - - -, f 5;
+#X floatatom 1057 326 5 0 0 0 - - -, f 5;
+#X floatatom 1110 327 5 0 0 0 - - -, f 5;
+#X obj 1057 296 unpack f f;
+#X obj 35 715 outlet;
+#X obj 35 220 mrpeach/routeOSC /touch1;
+#X obj 638 228 mrpeach/routeOSC /touch2;
+#X obj 1055 255 mrpeach/routeOSC /touch3;
+#X obj 1235 255 mrpeach/routeOSC /touch4;
+#X obj 140 65 cnv 15 251 112 empty empty empty 20 12 0 14 #4b556c #404040
+0;
+#X obj 140 55 cnv 15 252 17 empty empty MODULO\ M.\ Táctil\ PHONE\ 2
+49 7 2 12 #62a0d0 #2e2e2e 0;
+#X obj 165 125 bng 10 250 50 0 parte2 \$0-dispret1 1\ contacto -8 -11
+1 9 #fcfcfc #000000 #14c9ff;
+#X obj 291 124 bng 12 250 50 0 empty disp3 3\ contactos -12 -10 1 9
+#fcfcfc #000000 #14c9ff;
+#X obj 348 124 bng 12 250 50 0 empty disp4 \ 4\ contactos -13 -10 1
+9 #fcfcfc #000000 #14c9ff;
+#X obj 232 124 bng 12 250 50 0 parte2 \$0-dispret4 2\ contactos\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+-12 -10 1 9 #fcfcfc #000000 #14c9e1;
+#X obj 35 250 unpack f f, f 17;
+#X obj 175 80 nbx 3 12 0 127 0 0 empty \$0-tacx1 EJE\ X -25 5 1 8 #1e3076
+#ffffff #fffafa 0 256 3;
+#X obj 35 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 175 95 nbx 3 12 0 127 0 0 empty \$0-tacy1 EJE\ Y -23 5 1 8 #162550
+#ffffff #ffffff 0 256 3;
+#X obj 224 94 nbx 3 12 0 127 0 0 empty tacx2 empty 0 -8 0 10 #2b3c7e
+#ffffff #000000 0 256 3;
+#X obj 224 79 nbx 3 12 0 127 0 0 empty tacy2 empty 0 -8 0 10 #2b3c7e
+#ffffff #000000 0 256 3;
+#X obj 349 94 nbx 3 12 0 127 0 0 empty tacy4 empty 0 -8 0 10 #2b3c7e
+#ffffff #000000 0 256 3;
+#X obj 349 80 nbx 3 12 0 127 0 0 empty tacx4 empty 0 -8 0 10 #2b3c7e
+#ffffff #000000 0 256 3;
+#X obj 289 80 nbx 3 13 0 127 0 0 empty tacx3 empty 0 -8 0 10 #263369
+#ffffff #000000 0 256 3;
+#X obj 290 95 nbx 3 12 0 127 0 0 empty tacy3 empty 0 -8 0 10 #243a70
+#ffffff #000000 0 256 3;
+#X obj 40 200 cnv 15 862 14 empty empty empty 20 12 0 14 #af4141 #404040
+0;
+#X obj 35 630 debounce 1000;
+#X obj 150 325 sel -1;
+#X obj 150 350 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 125 410 timer;
+#X floatatom 125 447 5 0 0 0 - - -, f 5;
+#X obj 35 275 clip 0 255;
+#X floatatom 35 305 5 0 0 0 - - -, f 5;
+#X obj 165 485 bng 15 250 50 0 \$0-tacphone2 empty empty 17 7 0 10
+#fcfcfc #000000 #000000;
+#X obj 210 485 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 310 495 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 164 140 bng 14 250 50 0 parte2 \$0-dispret2 Pres.\ time 20 6
+2 9 #fcfcfc #000000 #14c9ff;
+#X obj 164 158 bng 16 250 50 0 parte2 \$0-dispret3 empty -8 -11 1 9
+#fcfcfc #000000 #14c9ff;
+#X obj 35 595 spigot;
+#X msg 90 560 1;
+#X msg 120 560 0;
+#X obj 155 555 del 500;
+#X obj 93 524 t b b;
+#X obj 440 492 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 205 305 maxlib/scale 0 1 0 127;
+#X floatatom 205 330 5 0 0 0 - - -, f 5;
+#X obj 205 355 maxlib/scale 0 1 0 127;
+#X floatatom 205 385 5 0 0 0 - - -, f 5;
+#X obj 638 258 unpack f f;
+#X floatatom 750 305 5 0 0 0 - - -, f 5;
+#X obj 635 370 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 635 650 debounce 1000;
+#X obj 750 335 sel -1;
+#X obj 750 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 725 420 timer;
+#X floatatom 725 467 5 0 0 0 - - -, f 5;
+#X obj 635 285 clip 0 255;
+#X floatatom 635 315 5 0 0 0 - - -, f 5;
+#X obj 770 485 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 840 505 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 903 505 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 635 615 spigot;
+#X msg 690 580 1;
+#X msg 720 580 0;
+#X obj 755 575 del 500;
+#X obj 693 544 t b b;
+#X obj 983 505 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 805 315 maxlib/scale 0 1 0 127;
+#X floatatom 805 340 5 0 0 0 - - -, f 5;
+#X obj 805 365 maxlib/scale 0 1 0 127;
+#X floatatom 805 390 5 0 0 0 - - -, f 5;
+#X obj 231 140 bng 14 250 50 0 parte1 \$0-dispret5 Pres.\ time 20 6
+2 9 #fcfcfc #000000 #14c9ff;
+#X obj 230 157 bng 16 250 50 0 parte1 \$0-dispret6 empty -8 -11 1 9
+#fcfcfc #000000 #14c9ff;
+#X obj 250 595 spigot;
+#X msg 309 558 1;
+#X msg 339 558 0;
+#X obj 312 522 t b b;
+#X obj 375 600 spigot;
+#X msg 438 553 1;
+#X msg 468 553 0;
+#X obj 441 517 t b b;
+#X obj 374 553 del 2000;
+#X obj 503 548 del 2000;
+#X obj 55 665 s \$0-disp1;
+#X obj 245 330 s \$0-tacx1;
+#X obj 245 385 s \$0-tacy1;
+#X obj 160 720 s \$0-dispret1;
+#X obj 255 700 s \$0-dispret2;
+#X obj 430 715 s \$0-dispret3;
+#X obj 845 390 s \$0-tacy2;
+#X obj 845 340 s \$0-tacx2;
+#X obj 815 710 s \$0-dispret4;
+#X obj 635 710 s \$0-disp2;
+#X obj 930 710 s $-dispret5;
+#X obj 1035 710 s \$0-dispret6;
+#N canvas 266 177 1174 368 \$0-condicional-taltil1 0;
+#X obj 40 20 inlet;
+#X obj 40 60 expr if ($f1 < 1000 \, 1 \, 0);
+#X obj 40 95 sel 1;
+#X obj 40 200 outlet;
+#X obj 235 200 outlet;
+#X obj 40 135 debounce 1000;
+#X obj 235 135 debounce 1000;
+#X obj 235 60 expr if ($f1 > 1001 && $f1 < 3000 \, 2 \, 0);
+#X obj 545 205 outlet;
+#X obj 545 140 debounce 1000;
+#X obj 235 95 sel 2;
+#X obj 545 100 sel 3;
+#X obj 865 205 outlet;
+#X obj 865 140 debounce 1000;
+#X obj 540 60 expr if ($f1 > 3001 && $f1 < 5000 \, 3 \, 0);
+#X obj 865 100 sel 4;
+#X obj 860 60 expr if ($f1 > 5001 \, 4 \, 0);
+#X connect 0 0 1 0;
+#X connect 0 0 7 0;
+#X connect 0 0 14 0;
+#X connect 0 0 16 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 6 0;
+#X connect 11 0 9 0;
+#X connect 13 0 12 0;
+#X connect 14 0 11 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X restore 765 455 pd \$0-condicional-taltil1;
+#N canvas 266 287 1174 368 \$0-condicional-taltil 0;
+#X obj 40 20 inlet;
+#X obj 40 60 expr if ($f1 < 1000 \, 1 \, 0);
+#X obj 40 95 sel 1;
+#X obj 40 200 outlet;
+#X obj 235 200 outlet;
+#X obj 40 135 debounce 1000;
+#X obj 235 135 debounce 1000;
+#X obj 545 205 outlet;
+#X obj 545 140 debounce 1000;
+#X obj 545 100 sel 3;
+#X obj 865 205 outlet;
+#X obj 865 140 debounce 1000;
+#X obj 865 100 sel 4;
+#X obj 860 60 expr if ($f1 > 5001 \, 4 \, 0);
+#X obj 360 145 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 665 145 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 155 140 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 235 95 sel 2;
+#X obj 235 60 expr if ($f1 > 1001 && $f1 < 3000 \, 2 \, 0);
+#X obj 540 60 expr if ($f1 > 3001 && $f1 < 4000 \, 3 \, 0);
+#X connect 0 0 1 0;
+#X connect 0 0 13 0;
+#X connect 0 0 18 0;
+#X connect 0 0 19 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 16 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 9 0 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
+#X connect 17 0 6 0;
+#X connect 17 0 14 0;
+#X connect 18 0 17 0;
+#X connect 19 0 9 0;
+#X restore 165 445 pd \$0-condicional-taltil;
+#X obj 55 385 debounce 4000;
+#X obj 475 40 loadbang;
+#X obj 480 65 s \$0-resetcomp;
+#X obj 350 455 r \$0-resetcomp;
+#X obj 250 485 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 227 417 3200;
+#X obj 640 400 debounce 4000;
+#X obj 315 660 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 275 675 s touch2sec;
+#X connect 1 0 8 0;
+#X connect 1 0 9 0;
+#X connect 1 0 10 0;
+#X connect 1 0 7 0;
+#X connect 2 0 29 0;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 7 0 17 0;
+#X connect 8 0 50 0;
+#X connect 9 0 5 0;
+#X connect 17 0 33 0;
+#X connect 17 1 2 0;
+#X connect 17 1 48 0;
+#X connect 19 0 40 0;
+#X connect 19 0 99 0;
+#X connect 28 0 6 0;
+#X connect 28 0 85 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 1;
+#X connect 31 0 32 0;
+#X connect 31 0 98 0;
+#X connect 33 0 34 0;
+#X connect 33 0 46 0;
+#X connect 34 0 19 0;
+#X connect 35 0 88 0;
+#X connect 35 0 44 0;
+#X connect 36 0 75 0;
+#X connect 37 0 78 0;
+#X connect 40 0 28 0;
+#X connect 41 0 40 1;
+#X connect 42 0 40 1;
+#X connect 43 0 41 0;
+#X connect 44 0 43 0;
+#X connect 44 1 42 0;
+#X connect 45 0 82 0;
+#X connect 46 0 47 0;
+#X connect 46 0 86 0;
+#X connect 48 0 49 0;
+#X connect 48 0 87 0;
+#X connect 50 0 58 0;
+#X connect 50 1 51 0;
+#X connect 51 0 54 0;
+#X connect 52 0 63 0;
+#X connect 52 0 105 0;
+#X connect 53 0 94 0;
+#X connect 54 0 55 0;
+#X connect 55 0 56 1;
+#X connect 56 0 57 0;
+#X connect 56 0 97 0;
+#X connect 58 0 59 0;
+#X connect 58 0 69 0;
+#X connect 59 0 52 0;
+#X connect 61 0 67 0;
+#X connect 61 0 82 0;
+#X connect 61 0 78 0;
+#X connect 62 0 78 0;
+#X connect 62 0 82 0;
+#X connect 63 0 53 0;
+#X connect 64 0 63 1;
+#X connect 65 0 63 1;
+#X connect 66 0 64 0;
+#X connect 67 0 66 0;
+#X connect 67 1 65 0;
+#X connect 68 0 78 0;
+#X connect 68 0 82 0;
+#X connect 69 0 70 0;
+#X connect 69 0 92 0;
+#X connect 71 0 72 0;
+#X connect 71 0 91 0;
+#X connect 75 0 89 0;
+#X connect 75 0 106 0;
+#X connect 75 0 107 0;
+#X connect 76 0 75 1;
+#X connect 77 0 75 1;
+#X connect 78 0 83 0;
+#X connect 78 1 77 0;
+#X connect 79 0 90 0;
+#X connect 80 0 79 1;
+#X connect 81 0 79 1;
+#X connect 82 0 84 0;
+#X connect 82 1 81 0;
+#X connect 83 0 76 0;
+#X connect 84 0 80 0;
+#X connect 97 0 60 0;
+#X connect 97 1 61 0;
+#X connect 97 1 93 0;
+#X connect 97 2 62 0;
+#X connect 97 2 95 0;
+#X connect 97 3 68 0;
+#X connect 97 3 96 0;
+#X connect 98 0 35 0;
+#X connect 98 1 36 0;
+#X connect 98 2 103 0;
+#X connect 99 0 31 0;
+#X connect 100 0 101 0;
+#X connect 102 0 76 0;
+#X connect 102 0 80 0;
+#X connect 103 0 79 0;
+#X connect 104 0 98 0;
+#X connect 105 0 56 0;
+#X coords 0 -1 1 1 267 137 2 132 48;

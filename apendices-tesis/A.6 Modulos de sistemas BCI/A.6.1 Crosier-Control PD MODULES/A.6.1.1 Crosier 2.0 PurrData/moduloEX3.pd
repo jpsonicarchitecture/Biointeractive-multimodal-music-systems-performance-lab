@@ -1,0 +1,219 @@
+#N canvas 139 122 1264 783 12;
+#X obj 90 40 import mrpeach;
+#X obj 50 0 inlet;
+#X obj 150 132 cnv 15 240 17 empty empty MODULO\ EX3 66 6 2 12 #24435b
+#f2f2f2 0;
+#X obj 150 152 cnv 15 241 130 empty empty empty 20 12 0 14 #eeeeee
+#404040 0;
+#X obj 160 162 hsl 60 8 0 50 0 0 sengyroacel empty Sencibilidad\ giro/acel
+-2 -8 1 10 #000000 #00d6e6 #000000 0 1;
+#X obj 229 162 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 270 164 hsl 60 8 0 40 0 0 compaluz empty Sencibilidad\ compa/light
+-2 -8 1 10 #000000 #00d6e6 #000000 0 1;
+#X obj 340 163 nbx 3 11 0 40 0 0 empty empty empty 0 -8 1 9 #000000
+#b82a64 #000000 0 256 0;
+#X obj 1196 35 vsl 10 84 0 127 0 0 empty presionmidi SPL\ ref 18 34
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 1215 90 nbx 3 14 -1e+37 1e+37 0 0 empty presionmidi MIDI\ spl
+0 -8 0 10 #000000 #ff0505 #000000 0 256 0;
+#X obj 1275 30 hsl 113 16 30 4000 1 0 empty empty Frecuencia 72 -9
+2 10 #000000 #00ff11 #000000 0 1;
+#X text 1276 40 |;
+#X text 1311 40 |;
+#X text 1351 40 |;
+#X text 1382 40 |;
+#X text 1370 55 4Khz;
+#X text 1266 53 30Hz;
+#X obj 1308 74 nbx 5 14 -1e+37 1e+37 0 0 empty frechook MIDI\ frec
+0 -8 0 10 #000000 #2cd416 #000000 0 256 1;
+#X obj 1000 350 value presion;
+#X obj 1030 380 + 50;
+#X msg 1080 405 0;
+#X msg 1115 405 127;
+#X obj 980 450 maxlib/scale 30 100 0 127;
+#X obj 980 380 - 10;
+#X floatatom 980 410 5 0 0 0 - - -, f 5;
+#X floatatom 1030 410 5 0 0 0 - - -, f 5;
+#X obj 983 486 int;
+#X floatatom 983 515 5 0 0 0 - - -, f 5;
+#X obj 980 550 s presionmidi;
+#X text 1210 106 0;
+#X text 1208 32 -120;
+#X obj 1225 107 bng 20 250 50 0 empty empty aut.ajus. 25 7 2 10 #fcfcfc
+#000000 #000000;
+#X obj 40 620 outlet;
+#X obj 980 590 outlet;
+#X obj 270 207 cnv 15 106 70 empty empty empty 20 12 0 14 #919191 #404040
+0;
+#X obj 1354 108 nbx 4 12 -1e+37 1e+37 0 0 uspl1 empty umbral1 -41 -8
+1 10 #fcfcfc #000000 #000000 0 256 0;
+#X floatatom 50 450 5 0 0 0 - - -, f 5;
+#X floatatom 50 539 5 0 0 0 - - -, f 5;
+#X floatatom 107 451 5 0 0 0 - - -, f 5;
+#X floatatom 170 450 5 0 0 0 - - -, f 5;
+#X floatatom 241 450 5 0 0 0 - - -, f 5;
+#X floatatom 298 451 5 0 0 0 - - -, f 5;
+#X obj 241 400 unpack f f f, f 16;
+#X floatatom 355 450 5 0 0 0 - - -, f 5;
+#X obj 707 395 unpack f, f 9;
+#X floatatom 706 445 5 0 0 0 - - -, f 5;
+#X obj 875 395 unpack f, f 9;
+#X floatatom 874 445 5 0 0 0 - - -, f 5;
+#X floatatom 110 539 5 0 0 0 - - -, f 5;
+#X floatatom 180 539 5 0 0 0 - - -, f 5;
+#X floatatom 260 539 5 0 0 0 - - -, f 5;
+#X floatatom 320 539 5 0 0 0 - - -, f 5;
+#X floatatom 390 539 5 0 0 0 - - -, f 5;
+#X floatatom 705 534 5 0 0 0 - - -, f 5;
+#X floatatom 875 534 5 0 0 0 - - -, f 5;
+#X obj 160 490 r sensgyroacel;
+#X obj 765 475 r compaluz;
+#X obj 100 620 outlet;
+#X obj 160 620 outlet;
+#X obj 230 620 outlet;
+#X obj 300 620 outlet;
+#X obj 360 620 outlet;
+#X obj 705 655 outlet;
+#X obj 875 635 outlet;
+#X obj 50 580 s girozigx;
+#X obj 130 580 s girozigy;
+#X obj 210 580 s girozigz;
+#X obj 311 580 s acelzigx;
+#X obj 402 577 s acelzigy;
+#X obj 480 580 s acelzigz;
+#X obj 735 615 s zigluz;
+#X obj 885 575 s zigcompass;
+#X obj 465 150 s zigforce;
+#X obj 161 217 nbx 3 14 -1e+37 1e+37 0 0 empty girozigx Giroscopio
+0 -8 1 9 #000000 #1e8da9 #000000 -0.00856675 256 1;
+#X obj 161 237 nbx 3 14 -1e+37 1e+37 0 0 empty girozigy empty 0 -8
+0 10 #000000 #1e8da9 #000000 23.2672 256 1;
+#X obj 161 257 nbx 3 14 -1e+37 1e+37 0 0 empty girozigz empty 0 -8
+0 10 #000000 #1e8da9 #000000 1 256 1;
+#X obj 215 218 nbx 3 14 -1e+37 1e+37 0 0 empty acelzigx acelerómetro
+-4 -8 1 9 #000000 #1ea92e #000000 -0.000157231 256 1;
+#X obj 216 238 nbx 3 14 -1e+37 1e+37 0 0 empty acelzigy empty 0 -8
+0 10 #000000 #1ea92e #000000 25.1014 256 1;
+#X obj 217 258 nbx 3 14 -1e+37 1e+37 0 0 empty acelzigz empty 0 -8
+0 10 #000000 #1ea92e #000000 1 256 1;
+#X obj 280 210 vsl 8 58 0 127 0 0 empty zigluz Luz\ ambienteal 16 59
+1 9 #fcfcfc #000000 #000000 5700 1;
+#X obj 300 222 flatgui/knob 32 32 0 127 0 0 empty zigcompass Compass
+0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+;
+#X obj 705 575 maxlib/scale 0 50 0 127;
+#X obj 210 180 nbx 3 14 -1e+37 1e+37 0 0 empty zigforce tactil\ (force)
+-49 7 1 9 #000000 #c8a114 #0a0a0a 0.565 256 1;
+#X obj 50 510 mavg 3;
+#X obj 110 510 mavg 3;
+#X obj 180 510 mavg 3;
+#X obj 260 510 mavg 3;
+#X obj 320 510 mavg 3;
+#X obj 390 510 mavg 3;
+#X obj 705 505 mavg 3;
+#X obj 875 505 mavg 7;
+#X floatatom 465 115 5 0 0 0 - - -, f 5;
+#X obj 465 50 mrpeach/routeOSC /crosier/touch0;
+#X floatatom 710 120 5 0 0 0 - - -, f 5;
+#X obj 710 50 mrpeach/routeOSC /crosier/touch1;
+#X obj 710 85 unpack f;
+#X floatatom 945 110 5 0 0 0 - - -, f 5;
+#X obj 945 80 unpack f;
+#X obj 950 50 mrpeach/routeOSC /crosier/touch2;
+#X obj 280 315 print unpacked;
+#X obj 505 345 mrpeach/routeOSC /crosier/proximitymonitor;
+#X obj 500 380 unpack f;
+#X floatatom 500 415 5 0 0 0 - - -, f 5;
+#X obj 45 345 mrpeach/routeOSC /gyro /accel, f 63;
+#X obj 55 400 unpack f f f, f 16;
+#X obj 465 85 unpack f;
+#X obj 260 180 nbx 3 14 -1e+37 1e+37 0 0 empty zigforce2 empty -49
+7 1 9 #000000 #c8a114 #0a0a0a 0.5 256 1;
+#X obj 710 150 s zigforce2;
+#X obj 940 150 s zigforce3;
+#X obj 310 180 nbx 3 14 -1e+37 1e+37 0 0 empty zigforce3 empty -49
+7 1 9 #000000 #c8a114 #0a0a0a 0 256 1;
+#X obj 578 486 print no match;
+#X connect 1 0 94 0;
+#X connect 1 0 92 0;
+#X connect 1 0 98 0;
+#X connect 1 0 100 0;
+#X connect 1 0 103 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 18 0 19 0;
+#X connect 18 0 23 0;
+#X connect 19 0 25 0;
+#X connect 20 0 22 3;
+#X connect 21 0 22 4;
+#X connect 22 0 26 0;
+#X connect 23 0 24 0;
+#X connect 24 0 22 1;
+#X connect 25 0 22 2;
+#X connect 26 0 27 0;
+#X connect 26 0 33 0;
+#X connect 27 0 28 0;
+#X connect 36 0 83 0;
+#X connect 37 0 32 0;
+#X connect 37 0 64 0;
+#X connect 38 0 84 0;
+#X connect 39 0 85 0;
+#X connect 40 0 86 0;
+#X connect 41 0 87 0;
+#X connect 42 0 40 0;
+#X connect 42 1 41 0;
+#X connect 42 2 43 0;
+#X connect 43 0 88 0;
+#X connect 44 0 45 0;
+#X connect 45 0 89 0;
+#X connect 46 0 47 0;
+#X connect 47 0 90 0;
+#X connect 48 0 57 0;
+#X connect 48 0 65 0;
+#X connect 49 0 58 0;
+#X connect 49 0 66 0;
+#X connect 50 0 59 0;
+#X connect 50 0 67 0;
+#X connect 51 0 60 0;
+#X connect 51 0 68 0;
+#X connect 52 0 61 0;
+#X connect 52 0 69 0;
+#X connect 53 0 62 0;
+#X connect 53 0 81 0;
+#X connect 54 0 63 0;
+#X connect 54 0 71 0;
+#X connect 55 0 83 1;
+#X connect 55 0 84 1;
+#X connect 55 0 85 1;
+#X connect 55 0 86 1;
+#X connect 55 0 87 1;
+#X connect 55 0 88 1;
+#X connect 56 0 89 1;
+#X connect 56 0 90 1;
+#X connect 81 0 70 0;
+#X connect 83 0 37 0;
+#X connect 84 0 48 0;
+#X connect 85 0 49 0;
+#X connect 86 0 50 0;
+#X connect 87 0 51 0;
+#X connect 88 0 52 0;
+#X connect 89 0 53 0;
+#X connect 90 0 54 0;
+#X connect 91 0 72 0;
+#X connect 92 0 105 0;
+#X connect 93 0 107 0;
+#X connect 94 0 95 0;
+#X connect 95 0 93 0;
+#X connect 96 0 108 0;
+#X connect 97 0 96 0;
+#X connect 98 0 97 0;
+#X connect 100 0 101 0;
+#X connect 101 0 102 0;
+#X connect 103 0 104 0;
+#X connect 103 1 42 0;
+#X connect 104 0 36 0;
+#X connect 104 1 38 0;
+#X connect 104 2 39 0;
+#X connect 105 0 91 0;
+#X coords 0 -1 1 1 256 156 2 145 129;

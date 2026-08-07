@@ -1,0 +1,127 @@
+#N canvas 467 133 902 508 10;
+#X obj 30 -140 import mrpeach;
+#X obj 325 -135 inlet;
+#X obj 326 -44 unpack f f;
+#X obj 30 311 outlet;
+#X obj 325 73 mavg;
+#X obj 107 -60 cnv 15 193 17 empty empty Módulo\ M\ ambi.\ Phone\ 2
+34 6 1 12 #353b64 #fffafa 0;
+#X obj 107 -38 cnv 15 192 82 empty empty empty 20 12 0 14 #b8eaff #404040
+0;
+#X obj 120 11 hsl 30 13 2 20 0 0 \$0-senciluz empty Sencibilidad\ 
+-3 -9 2 10 #000000 #fc0400 #000000 0 1;
+#X obj 120 -23 nbx 3 17 -1e+37 1e+37 0 0 empty empty lums 50 6 2 13
+#1ca3c4 #000000 #000000 0 256 1;
+#X obj 210 -28 Flatgui/knob 32 32 0 127 0 0 \$0-sencibilidad empty
+Calibrador\ lumenes 0 -8 0 8 #fcfcfc #000000 #000000 0 1;
+;
+#X obj 120 32 nbx 3 11 -1e+37 1e+37 0 0 empty empty INTENSIDAD\ LUZ
+-8 -65 2 9 #000000 #8ac6c7 #000000 0 256 0;
+#X obj 165 14 nbx 3 14 -1e+37 1e+37 0 0 empty \$0-midiluz midi\ data
+4 17 2 8 #fcfcfc #000000 #000000 0 256 0;
+#X text 30 330 SALIDA MIDI;
+#X floatatom 361 52 5 0 0 0 - - -, f 5;
+#X obj 285 -32 vsl 10 69 0 32.4579 0 0 empty \$0-rv empty 0 -9 0 10
+#000000 #0fccb6 #000000 0 1;
+#X text 25 -120 MODULO PARAMETROS POR SENSOR DE LUZ TELEFONO 1;
+#X obj 325 -70 mrpeach/routeOSC /light;
+#X text 729 -68 1.bottom;
+#X text 729 -47 2.top;
+#X msg 680 -19 range \$1 \$2;
+#N canvas 366 206 174 247 flash-time 0;
+#X obj 68 180 pack;
+#X obj 103 149 t b a;
+#X obj 68 205 outlet;
+#X obj 103 104 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-bottom empty
+0 -8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 103 124 nbx 3 14 -1e+37 1e+37 0 0 \$0-dummy \$0-top empty 0
+-8 0 12 #fcfcfc #000000 #000000 0 256 0;
+#X obj 70 40 inlet;
+#X obj 120 60 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 48 42 2 100 100;
+#X restore 680 -69 pd flash-time;
+#X obj 326 18 line 30;
+#X msg 326 -12 \$1 200;
+#X floatatom 80 151 5 0 0 0 - - -, f 5;
+#X obj 260 0 bng 21 250 50 0 ajusluz empty empty 17 7 0 10 #a80000
+#000000 #000000;
+#X msg 44 151 0;
+#X msg 120 150 0;
+#X msg 150 150 127;
+#X obj 30 181 maxlib/scale;
+#X obj 245 -15 nbx 3 12 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#000000 #ffffff #000000 0 256 3;
+#X obj 30 210 clip 0 127;
+#X obj 30 270 line 30;
+#X msg 30 240 \$1 50;
+#X obj 30 290 int;
+#X msg 680 -100 0;
+#X text 250 -35 max--;
+#X text 250 25 min--;
+#X obj 480 -70 mrpeach/routeOSC /proximity;
+#X obj 480 -40 unpack f;
+#X floatatom 480 -10 5 0 0 0 - - -, f 5;
+#X obj 480 25 sel 0;
+#X obj 215 15 tgl 19 0 empty \$0-proxcel1 proximity -4 21 2 8 #fcfcfc
+#000000 #000000 0 1;
+#X obj 326 112 s \$0-valuz;
+#X obj 30 121 r \$0-valuz;
+#X obj 105 120 value \$0-maxluz;
+#X obj 45 65 r \$0-ajusluz;
+#X obj 115 315 s \$0-midiluz;
+#X obj 480 60 s \$0-proxcel1;
+#X obj 210 70 value \$0-maxluz;
+#X obj 114 -92 r \$0-valuz;
+#X obj 402 21 r \$0-senciluz;
+#X obj 720 -100 value \$0-vmax;
+#X obj 675 -130 r \$0-ajusluz;
+#X obj 680 10 s \$0-rv;
+#X connect 1 0 16 0;
+#X connect 1 0 37 0;
+#X connect 2 0 22 0;
+#X connect 4 0 42 0;
+#X connect 7 0 10 0;
+#X connect 8 0 14 0;
+#X connect 9 0 29 0;
+#X connect 9 0 48 0;
+#X connect 13 0 4 1;
+#X connect 16 0 2 0;
+#X connect 19 0 53 0;
+#X connect 20 0 19 0;
+#X connect 21 0 4 0;
+#X connect 22 0 21 0;
+#X connect 23 0 28 2;
+#X connect 25 0 28 1;
+#X connect 26 0 28 3;
+#X connect 27 0 28 4;
+#X connect 28 0 30 0;
+#X connect 30 0 32 0;
+#X connect 31 0 33 0;
+#X connect 32 0 31 0;
+#X connect 33 0 3 0;
+#X connect 33 0 46 0;
+#X connect 34 0 20 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 40 0;
+#X connect 40 0 47 0;
+#X connect 43 0 28 0;
+#X connect 44 0 23 0;
+#X connect 45 0 25 0;
+#X connect 45 0 26 0;
+#X connect 45 0 27 0;
+#X connect 45 0 44 0;
+#X connect 49 0 8 0;
+#X connect 50 0 13 0;
+#X connect 51 0 20 1;
+#X connect 51 0 14 0;
+#X connect 52 0 34 0;
+#X connect 52 0 51 0;
+#X coords 0 -1 1 1 200 109 2 103 -62;
