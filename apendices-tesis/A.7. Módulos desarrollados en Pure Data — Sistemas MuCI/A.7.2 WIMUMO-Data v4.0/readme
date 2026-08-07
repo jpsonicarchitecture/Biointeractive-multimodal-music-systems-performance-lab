@@ -1,1 +1,18 @@
-
+This module only works with PD plugDAta; all the libraries mentioned in PlugData must be installed.
+* `bsaylor`
+* `ceammc`
+* `cyclone`
+* `else`
+* `Gem`
+* `ggee`
+* `iemgui`
+* `mapping`
+* `maxlib`
+* `moonlib`
+* `motex`
+* `mrpeach`
+* `puremapping`
+* `purepd`
+* `unauthorized`
+* `windowing`
+* `zexy`
