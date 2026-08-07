@@ -1,0 +1,4 @@
+#N canvas 135 23 455 355 12;
+#X obj 50 30 OSConect;
+#X obj 50 130 smartouch;
+#X connect 0 0 1 0;

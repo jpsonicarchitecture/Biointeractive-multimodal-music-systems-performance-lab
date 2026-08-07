@@ -1,0 +1,6 @@
+#N canvas 214 140 276 315 12;
+#X obj 40 20 OSConect;
+#X floatatom 40 280 5 0 0 0 - - -, f 5;
+#X obj 40 140 mprox;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
