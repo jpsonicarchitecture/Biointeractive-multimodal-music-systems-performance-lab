@@ -1,1 +1,7 @@
+### Usage with Python OSC 
 
+To use patch with Python, download the latest version of Python and open the following file:
+
+* museBridgeOSC.py`
+run the script, be sure that mind monitor are streming Data from Muse Athena.
+Only Works with ATHENA VERSION
