@@ -56,8 +56,8 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 
 ### A.6. Módulos desarrollados en Pure Data — Sistemas BCI y DMI
 - [A.6.1 Crosier-Control-Data PD MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES)
-- [A.6.2 MUSE-DataIM v4.0](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MUSE-DataIM%20v4.0/MUSEData%204.0)
-- [A.6.3 MUSE-DataIMmov v4.0](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.3%20MUSE-DataIMmov%20v4.0)
+- [A.6.2 MUSE-Data MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MUSE-DataIM%20v4.0/MUSEData%204.0)
+- [A.6.3 MUSE-DataIMmov MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.3%20MUSE-DataIMmov%20v4.0)
 - [A.6.4 Smartphone Sensors](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.4%20Smartphone-Sensors)
 
 ### A.7. Módulos desarrollados en Pure Data — Sistemas MuCI
