@@ -4,25 +4,51 @@ Collection of patches and systems in Pure Data(Purr Data and PlugData) for biome
 
 ## Contents
 
-### A.6.1 Crosier-Control-Data 
+### A.6.1 Crosier-Control-Data  PD MODULES
 DMI (Digital Musical Instrument) control system with sensor data processing.
+Version 2.0 is for Purr Data or Vanilla with the libraries installed. 
+Version 3 is for PLugData, and the libraries mentioned above must be installed.
 
-### A.6.2 MUSE-DataIM 
+### A.6.2 MUSE-Data MODULES
 Interface for EEG data processing from the MUSE headset.
-
-### A.6.3 MUSE-DataIMmov 
+The modules for versions 3.0 and 4.1 work with Purr Data or vanilla PD with the required libraries installed. 
 Control system with MUSE for motion applications.
+
+### A.6.3 MUSE-Data ENGINE
+Version 5.0 “ENGINE” and later are for PlugData and the recommended libraries. Specifically, in version 5.3, the OSC data sent from Mind Monitor is processed in Python and not in PD, as in the other versions.
 
 ### A.6.4 Smarphone-Sensors
 Modules for smartphone Sensors
+Here are all the modules available in PD individually. Some are for use with Purr Data or Vanilla, and others are for PlugData, with variations in the visual interface.
 
 
 ## Requirements
 - Pure Data VERSION PurrData  Purr-Data-2.19.3 20230725-rev.e9fca4f8 or higher
 - PlugData 7 or Higher
 - Not compatible with Vanilla at this time.
-- Libraries included in the PurrData version. 
+- Libraries included in the PurrData version.
 
+## Libraries for PD PlugData or PD Vanilla
+
+* `bsaylor`
+* `ceammc`
+* `cyclone`
+* `else`
+* `Gem`
+* `ggee`
+* `iemgui`
+* `mapping`
+* `maxlib`
+* `moonlib`
+* `motex`
+* `mrpeach`
+* `puremapping`
+* `purepd`
+* `unauthorized`
+* `windowing`
+* `zexy`
+
+  
 ## Installation
 1. Download the entire folder.
 2. Open the file 1_CrosierMain.pd. 
@@ -41,23 +67,49 @@ Colección de patches y sistemas en Pure Data para procesamiento de datos biomé
 
 ## Contenido
 
-### A.6.1 Crosier-Control-Data v2.0
-Sistema de control DMI (Digital Musical Instrument) con procesamiento de datos de sensores.
+### A.6.1 Crosier-Control-Data PD MODULOS
+DMI (Digital Musical Instrument) control system with sensor data processing.
+Version 2.0 is for Purr Data or Vanilla with the libraries installed. 
+Version 3 is for PLugData, and the libraries mentioned above must be installed.
 
-### A.6.2 MUSE-DataIM v4.0
-Interfaz para procesamiento de datos EEG del headset MUSE.
+### A.6.2 MUSE-DataIM MODULES
+Interface for EEG data processing from the MUSE headset.
+The modules for versions 3.0 and 4.1 work with Purr Data or vanilla PD with the required libraries installed. 
+Control system with MUSE for motion applications.
 
-### A.6.3 MUSE-DataIMmov v4.0
-Sistema de control con MUSE para aplicaciones de movimiento.
+### A.6.3 MUSE-Data ENGINE
+Version 5.0 “ENGINE” and later are for PlugData and the recommended libraries. Specifically, in version 5.3, the OSC data sent from Mind Monitor is processed in Python and not in PD, as in the other versions.
 
 ### A.6.4 Smarphone-Sensors
-Modules para los Sensores en los smartphone 
+Módulos para sensores de teléfonos inteligentes
+Aquí se presentan todos los módulos disponibles en Pd de forma individual. Algunos están destinados a Purr Data o Vanilla, y otros a PlugData, presentando variaciones en la interfaz visual.
 
 ## Requisitos
 - Pure Data VERSION PurrData  Purr-Data-2.19.3 20230725-rev.e9fca4f8 o superir
 - PlugData version 7 o superior
 - no es complatible con Vanilla hasa el momento.
-- Librerías incluidas en la version PurrData, 
+- Librerías incluidas en la version PurrData,
+
+## Libraries para PD PlugData o PD Vanilla
+
+* `bsaylor`
+* `ceammc`
+* `cyclone`
+* `else`
+* `Gem`
+* `ggee`
+* `iemgui`
+* `mapping`
+* `maxlib`
+* `moonlib`
+* `motex`
+* `mrpeach`
+* `puremapping`
+* `purepd`
+* `unauthorized`
+* `windowing`
+* `zexy`
+
 
 ## Instalación
 1. Descargar la carpeta completa
