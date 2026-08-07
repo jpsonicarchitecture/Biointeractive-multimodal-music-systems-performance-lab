@@ -45,14 +45,16 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 
 ### A.3. Manuales y documentación técnica del DMI Crosier-Control
 - [A.3.1 Crosier-Control-Data v2.0](./apendices-tesis/A.3%20Manuales%20Modulo%20Crosier-Control/CrosierMAnual-repositorio-EN%20.pdf)
-
+- [A.3.1 Crosier-Control-Data v3.0 PlugData]
 ### A.4. Manuales y documentación técnica de sistemas BCI
 - [A.4.1 MUSE-Data v4.0](./apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/MuseDataMAnual-repositorio-EN.pdf)
 - [A.4.2 MUSE-DataIMmov v4.0](./apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/A.4.2%20MUSE-DataIMmov%20v4.0/MuseDataIMMOVl-repositorio-EN.pdf)
 - [A.4.3 Mindflex-Synth y Muse-Synth](./apendices-tesis/A.4%20Manuales%20Sistemas%20BCI/A.4.3%20Mindflex-Synth%20y%20Muse-Synth/MindFlexData-repositorio-EN.pdf)
+- [A.4.4 MUSE-DAta Engine v6.0]
 
 ### A.5. Manuales y documentación técnica de sistemas MuCI
 - [A.5.1 WIMUMO-Data v3.1](./apendices-tesis/A.5.%20Manuales%20y%20documentación%20técnica%20de%20sistemas%20MuCI/A.5.1%20WIMUMO-Data%20v3.1/WIMUMOData%203.1%20-repositorio-EN.pdf)
+- [A.5.12 WIMUMO-Data v4.0]
 
 ### A.6. Módulos desarrollados en Pure Data — Sistemas BCI y DMI
 - [A.6.1 Crosier-Control-Data PD MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES)
