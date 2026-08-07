@@ -56,8 +56,8 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 
 ### A.6. Módulos desarrollados en Pure Data — Sistemas BCI y DMI
 - [A.6.1 Crosier-Control-Data PD MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES)
-  - [A.6.1.1 Crosier-control 2.0 PD PurrData]
-  - [A.6.1.2 Crosier-control 3.0 PD PlugData]
+  - [A.6.1.1 Crosier-control 2.0 PD PurrData](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES/A.6.1.1%20Crosier%202.0%20PurrData)
+  - [A.6.1.2 Crosier-control 3.0 PD PlugData](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES/A.6.1.2%20Crosier-Control%20v3.0%20PlugData)
 - [A.6.2 MUSE-Data MODULES](./apendices-tesis/A.6Modulos%20de%20sistemas%20BCI/A.6.2%20MuseDATA%20MODULES)
   - [A.6.2.1 MuseDATA 3.0](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MuseDATA%20MODULES/A.6.2.1%20MuseDATA%203.0)
   - [A.6.2.2 MuseData 4.1](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MuseDATA%20MODULES/A.6.2.2%20MuseData%204.1)
