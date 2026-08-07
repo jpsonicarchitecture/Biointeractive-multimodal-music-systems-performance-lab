@@ -56,13 +56,13 @@ Debido a la extensión y naturaleza técnica de los materiales complementarios v
 
 ### A.6. Módulos desarrollados en Pure Data — Sistemas BCI y DMI
 - [A.6.1 Crosier-Control-Data PD MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.1%20Crosier-Control%20PD%20MODULES)
-- [A.6.2 MUSE-Data MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MUSE-DataIM%20v4.0/MUSEData%204.0)
-- [A.6.3 MUSE-DataIMmov MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.3%20MUSE-DataIMmov%20v4.0)
+- [A.6.2 MUSE-Data MODULES](./apendices-tesis/A.6Modulos%20de%20sistemas%20BCI/A.6.2%20MuseDATA%20MODULES)
+- [A.6.3 MUSE-DataIMmov MODULES](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.2%20MuseDATA%20MODULES/A.6.2.3%20MuseData%20For%20Athena%205.0)
 - [A.6.4 Smartphone Sensors](./apendices-tesis/A.6%20Modulos%20de%20sistemas%20BCI/A.6.4%20Smartphone-Sensors)
 
 ### A.7. Módulos desarrollados en Pure Data — Sistemas MuCI
 - [A.7.1 WIMUMO-Data v3.1](./apendices-tesis/A.7.%20Módulos%20desarrollados%20en%20Pure%20Data%20—%20Sistemas%20MuCI/A.7.1%20WIMUMO-Data%20v3.1)
-- [A.7.2 MUSE-DataIMmov v5.0 fNIRS](./apendices-tesis/A.7.%20Módulos%20desarrollados%20en%20Pure%20Data%20—%20Sistemas%20MuCI/A.7.2%20MUSE-DataIMmov%20v5.0%20fNIRS)
+- [A.7.2 WIMUMO-Data v 4.0 PD PLugData](./apendices-tesis/A.7.%20Módulos%20desarrollados%20en%20Pure%20Data%20—%20Sistemas%20MuCI/A.7.2%20WIMUMO-Data%20v4.0)
 
 ### A.8. Modelos 3D de Crosier-Control
 - [A.8.1 Archivos f3D para Fusion 360 del Modelo de impresión en 3D](./apendices-tesis/A.8.%20Modelos%203D%20de%20Crosier-Control/A.8.1%20Archivos%20f3D%20para%20Fusion%20360%20del%20Modelo%20de%20impresión%20en%203D)
